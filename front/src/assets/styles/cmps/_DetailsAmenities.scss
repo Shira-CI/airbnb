@@ -1,0 +1,48 @@
+.amenities-details {
+  padding-top: 50px;
+  padding-bottom: 48px;
+  h1 {
+    font-family: Cereal-Book;
+    font-size: rem(22px);
+    padding-bottom: 24px;
+    margin: 0;
+  }
+  .amenities-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: rem(16px);
+    font-family: Cereal-Regular;
+    line-height: 23px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: flex;
+        align-items: center;
+        padding-bottom: 16px;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 15px;
+        }
+      }
+      li:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .show-all-amenities-btn {
+    background-color: transparent;
+    margin-top: 24px;
+    border: 1px solid black;
+    padding: 13px 20px;
+    font-family: Cereal-Medium;
+    font-size: rem(16px);
+    border-radius: 8px;
+    line-height: 20px;
+    &:hover {
+      background-color: #2222220d;
+    }
+  }
+}

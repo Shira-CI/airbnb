@@ -1,0 +1,22 @@
+.header-details {
+  h1 {
+    font-family: montserrat-Regular;
+    font-size: rem(24px);
+    color: #222222;
+    padding-top: 25px;
+    margin: 0;
+  }
+  .sub-header-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: rem(14px);
+    line-height: 20px;
+    font-family: cereal-Medium;
+    .super-host-details {
+      font-family: Cereal-Regular;
+    }
+    a {
+      font-family: cereal-Medium;
+    }
+  }
+}

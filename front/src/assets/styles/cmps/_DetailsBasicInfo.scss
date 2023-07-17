@@ -1,0 +1,31 @@
+.basic-info-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding-top: 60px;
+  padding-bottom: 20px;
+
+  .capacity-details {
+    h2 {
+      font-size: rem(22px);
+      font-family: Cereal-Book;
+      line-height: inherit;
+      margin-block: 0;
+    }
+    .space-dot {
+      margin-inline: 3px;
+    }
+    span {
+      line-height: 20px;
+      font-family: $font1;
+      font-size: rem(16px);
+    }
+  }
+  img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    object-fit: cover;
+  }
+}

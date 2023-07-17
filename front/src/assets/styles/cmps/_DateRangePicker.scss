@@ -1,0 +1,88 @@
+.date-range-wrapper {
+  padding-block: 48px;
+  max-height: 561px;
+  font-family: airbnb-cereal-medium;
+
+  .date-range-header {
+    padding-bottom: 22px;
+    h1 {
+      font-family: cereal-regular;
+      font-size: rem(22px);
+      margin: 0;
+      line-height: inherit;
+    }
+    h5 {
+      font-size: rem(14px);
+      margin: 0;
+      font-family: cereal-regular;
+      padding-top: 8px;
+      letter-spacing: 0.5px;
+    }
+  }
+  .check-in-pick {
+    position: relative;
+    margin: 0;
+    transform: translateY(0);
+    border: transparent;
+    height: 373px;
+  }
+  .date-pick-header {
+    display: none;
+  }
+  .rdp-multiple_months {
+    margin: 0;
+  }
+  .rdp-month {
+    padding-inline: 13px;
+    margin: 0;
+    width: 100%;
+  }
+  .rdp-caption_label {
+    font-size: rem(16px);
+    font-family: quickSand-Medium;
+    color: #222222;
+  }
+  .rdp-head_row {
+    font-size: rem(16px);
+    .rdp-head_cell {
+      text-transform: capitalize;
+      font-family: cereal-regular;
+    }
+  }
+  .rdp-tbody {
+    font-size: rem(14px);
+    .rdp-day_selected {
+      background-color: $clr13;
+      color: black;
+    }
+
+    .rdp-day_range_start.rdp-day_selected,
+    .rdp-day_range_end.rdp-day_selected {
+      background-color: black;
+      border-radius: 50%;
+      color: white;
+    }
+  }
+  .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+    background-color: transparent;
+    border: 1px solid black;
+  }
+  .rdp-weeknumber,
+  .rdp-day {
+    width: 45px;
+    height: 45px;
+    line-height: 18px;
+  }
+}
+
+.date-range-bottom {
+  a {
+    display: flex;
+    justify-content: flex-end;
+    font-size: rem(14px);
+    margin: 0;
+    font-family: cereal-regular;
+    color: #222222;
+    text-decoration: underline;
+  }
+}

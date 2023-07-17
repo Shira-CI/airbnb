@@ -1,0 +1,21 @@
+.description-details {
+  padding-block: 32px;
+  font-family: Cereal-Regular;
+  p {
+    font-size: rem(16px);
+    line-height: 24px;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+  a {
+    text-decoration: none;
+    text-decoration: underline;
+    font-size: rem(16px);
+    font-family: Cereal-Medium;
+    img {
+      margin-left: 8px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

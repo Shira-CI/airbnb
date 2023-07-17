@@ -1,0 +1,183 @@
+.my-orders {
+    max-width: 1120px;
+    margin: auto;
+    font-family: cereal-regular;
+    overflow: hidden;
+
+    .rent-headers{
+        width: 68%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+   
+    .orders-header {
+        padding-top: 10px;
+        margin-block-end: 42px;
+        font-size: 2em;
+    }
+
+
+    .dash-info-container {
+        padding-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+
+        .dash-info {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            border: 1px dotted $clr8;
+        }
+    }
+
+    .orders-table {
+        width: 100%;
+        border: 1px solid $clr12;
+        border-radius: 15px;
+        border-spacing: 0;
+        margin-bottom: 50px;
+
+        .actions-td {
+            position: relative;
+            left: 10px;
+        }
+
+        .approve-btn {
+            background-color: rgb(123, 255, 185);
+            border-radius: 2em;
+            font-size: 1em;
+            font-family: cereal-regular;
+            padding: 12px;
+            // margin-inline-start: 2px;
+            color: $clr8;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+            &:hover {
+                background-color: rgb(53, 255, 147);
+
+            }
+
+        }
+
+        .guests-count-td {
+            padding-left: 20px;
+        }
+
+        thead,
+        tbody {
+            width: 100%;
+        }
+
+        .trip-row {
+            width: 100%;
+            height: 100%;
+        }
+
+        th {
+            padding-inline-start: 15px;
+            padding-block-start: 15px;
+            padding-block-end: 10px;
+            font-size: 0.9em;
+            text-align: left;
+            letter-spacing: 0.03em;
+        }
+
+        td {
+            padding-block-start: 25px;
+            padding-block-end: 10px;
+            padding-inline-start: 15px;
+            border-top: 1px solid $clr12 !important;
+        }
+
+        .status {
+
+            display: flex;
+
+            .colorful-dot {
+                display: flex;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: orange;
+                z-index: 3;
+                text-align: start;
+                margin: auto 0;
+                margin-right: 8px;
+
+                &.Approved {
+                    background-color: green;
+                }
+
+                &.Canceled {
+                    background-color: red;
+                }
+            }
+        }
+
+    }
+}
+
+
+.drop-down {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-toggle {
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    right: 10px;
+
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+    border: solid $clr8;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.arrow-down.open {
+    transform: rotate(222deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 90%;
+    left: -7px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: $clr11;
+    z-index: 3;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+
+    li {
+        background-color: inherit;
+        font-size: 14px;
+
+        &:hover {
+            background-color: $clr13;
+        }
+    }
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}

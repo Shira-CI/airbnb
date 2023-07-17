@@ -1,0 +1,147 @@
+.stay-details.overlay-fade-in {
+  animation: overlay-fade-in 0.3s ease-out forwards;
+}
+
+.stay-details.overlay-fade-out {
+  animation: overlay-fade-out 0.3s ease-out forwards;
+}
+
+.Modal-amenities {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 780px;
+  height: 90%;
+  background-color: white;
+  overflow-y: hidden;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+  animation: modal-slide-in 0.3s ease-out forwards;
+  border-radius: 1em;
+
+  @keyframes modal-slide-in {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes modal-slide-out {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, 100%);
+    }
+  }
+}
+:focus {
+  outline: none;
+}
+
+.Overlay-amenities {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  .amenities-modal-header {
+    h1 {
+      padding-top: 90px;
+      padding-left: 40px;
+      margin: 0;
+      font-family: Cereal-Bold;
+      font-size: rem(22px);
+    }
+    button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      left: 16px;
+      top: 16px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      padding: 0;
+      margin: 0;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    & button:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+
+  .amenities-modal-body {
+    height: 85%;
+    overflow-y: scroll;
+    ul {
+      list-style: none;
+      padding: 40px 24px 24px;
+      margin: 0;
+      .amenity-wrapper {
+        li {
+          display: flex;
+          align-items: center;
+          padding-block: 24px;
+          img {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+          }
+          p {
+            font-family: Cereal-Regular;
+            font-size: rem(16px);
+            margin: 0;
+            text-transform: capitalize;
+          }
+        }
+      }
+      .custom-hr {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border: none;
+        background-color: #dddddd;
+        margin: 0;
+      }
+    }
+  }
+
+  animation: overlay-fade-in 0.3s ease-out forwards;
+  &.overlay-fade-out {
+    animation: overlay-fade-out 0.3s ease-out forwards;
+  }
+
+  @keyframes overlay-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes overlay-fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

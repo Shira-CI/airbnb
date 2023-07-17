@@ -1,0 +1,72 @@
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/typography';
+
+// Basics
+@import 'basics/helpers';
+@import 'basics/layout';
+@import 'basics/base';
+@import 'basics/links';
+@import 'basics/forms';
+
+// Views
+@import 'views/HomePage';
+@import 'views/StayDetails';
+@import 'views/StayIndex';
+@import 'views/MyRents';
+@import 'views/Book';
+
+// Components
+
+//Header
+@import 'cmps/AppHeader';
+@import 'cmps/Login';
+@import 'cmps/SearchBar';
+@import 'cmps/AppFooter';
+@import 'cmps/Navbar';
+@import 'cmps/SearchBarExpanded';
+@import 'cmps/LabelsFilter';
+@import 'cmps/LocationSelect';
+@import 'cmps/GuestSelect';
+@import 'cmps/DateSelect';
+
+//Index
+@import 'cmps/StayList';
+@import 'cmps/StayPreview';
+@import 'cmps/Carousel';
+@import 'cmps/UserMsg';
+
+//Detail
+@import 'cmps/DetailsHeader';
+@import 'cmps/DetailsGallery';
+@import 'cmps/DetailsSaveShare';
+@import 'cmps/DetailsSubHeader';
+@import 'cmps/DetailsFeaturesInfo';
+@import 'cmps/DetailsBasicInfo';
+@import 'cmps/DetailsDescription';
+@import 'cmps/DetailsSleepInfo';
+@import 'cmps/DetailsAmenities';
+@import 'cmps/GalleryModal';
+@import 'cmps/DetailsReviews';
+@import 'cmps/_DateRangePicker';
+@import 'cmps/LearnMoreModal';
+@import 'cmps/ReviewsModal';
+@import 'cmps/DetailsMap';
+@import 'cmps/AmenitiesModal';
+@import 'cmps/ShareModal';
+
+//multiuse
+@import 'cmps/counter';
+@import 'cmps/Loader';
+
+//User
+@import 'cmps/UserMenuModal';
+@import 'cmps/MyRents';
+
+//Orders
+@import 'cmps/DatePicker';
+@import 'cmps/OrderModal';
+@import 'cmps/GuestsOrderSelect';
+@import 'cmps/MyTrips'

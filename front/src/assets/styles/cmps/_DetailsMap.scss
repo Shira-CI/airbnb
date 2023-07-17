@@ -1,0 +1,44 @@
+.details-map-wrapper {
+  padding-block: 48px;
+  h1 {
+    font-family: Cereal-Book;
+    font-size: rem(22px);
+    margin: 0;
+    padding-bottom: 24px;
+  }
+  .details-map {
+    height: 480px;
+    width: 100%;
+    margin-bottom: 32px;
+    .map-label {
+      font-family: Cereal-Book;
+      font-size: rem(14px);
+      padding: 14px 16px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .place-info {
+    h3 {
+      font-family: Cereal-book;
+      font-size: rem(16px);
+      margin: 0;
+      margin-bottom: 16px;
+      margin-top: 24px;
+    }
+    p {
+      font-family: circular-Regular;
+      font-size: rem(14px);
+      margin: 0;
+      padding-bottom: 8px;
+      padding-right: 32px;
+      line-height: 24px;
+    }
+  }
+  a {
+    text-decoration: underline;
+    font-family: circular-Book;
+    font-size: rem(16px);
+  }
+}

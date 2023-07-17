@@ -1,0 +1,97 @@
+.guests-pick {
+    position: absolute;
+    background-color: $clr11;
+    top: 0;
+    right: 0;
+    height: 400px;
+    border-radius: 30px;
+    border: 1px solid $clr12;
+    transform: translateY(15%);
+    visibility: visible;
+    cursor: auto;
+    padding: 0;
+    width: 407px;
+
+
+    .guest-select-container {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .guest-select-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $clr12;
+        flex: 1;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .guest-select-title {
+        font-size: rem(16px);
+        line-height: 20px;
+        font-family: airbnb-cereal-W_Bd;
+        padding-bottom: em(6px);
+        opacity: 0.85;
+        letter-spacing: 0.3px;
+    }
+
+    .guest-select-sub-title {
+        font-size: rem(14px);
+        line-height: 18px;
+        font-family: airbnb-cereal-W_Lt;
+        opacity: 0.7;
+    }
+
+    .guest-select-counter {
+        width: 120px;
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .counter-btn {
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        background-color: $clr11;
+        border: 1px solid $clr14 ;
+
+        &.plus {
+            background-image: url("../../img/icons/plusSign.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            opacity: 0.8;
+        }
+
+        &.minus {
+            background-image: url("../../img/icons/minusSign.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40%;
+            opacity: 0.8;
+        }
+
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+
+        &:hover:not([disabled]) {
+            border: 1px solid black;
+            opacity: 1;
+        }
+
+    }
+}

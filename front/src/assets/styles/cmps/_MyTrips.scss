@@ -1,0 +1,176 @@
+.my-trips-page {
+  max-width: 1120px;
+  margin: auto;
+  font-family: cereal-regular;
+  overflow: hidden;
+
+  .my-trips-header {
+    padding-top: 9px;
+    margin-block-end: 42px;
+    font-size: 2em;
+  }
+
+  .my-trips-table {
+    width: 100%;
+    border: 1px solid $clr12;
+    border-radius: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-block-end: 30px;
+
+
+    .guests-count-td {
+      padding-left: 20px;
+    }
+
+    thead,
+    tbody {
+      width: 100%;
+    }
+
+    .trip-row {
+      width: 100%;
+      height: 100%;
+
+      .total-price-td {
+        // text-align: start;
+        padding-inline-start: 18px;
+      }
+
+      // padding-block-end: 10px;
+      .stay-img {
+        margin-inline-end: 30px;
+        padding: 0;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        top: -7px;
+
+        img {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+
+        // }
+      }
+
+      .stay-name {
+        align-self: center;
+        // padding-bottom: 1px;
+      }
+
+
+    }
+
+
+
+    th {
+
+      padding: 15px;
+      font-size: 1em;
+      text-align: left;
+      letter-spacing: 0.03em;
+    }
+
+    td {
+      padding-block-start: 25px;
+      padding-block-end: 10px;
+      padding-inline-start: 15px;
+      border-top: 1px solid $clr12 !important;
+    }
+
+    .status {
+      display: flex;
+
+      .colorful-dot {
+        display: flex;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: orange;
+        z-index: 3;
+        text-align: start;
+        margin: auto 0;
+        margin-right: 8px;
+
+        &.Approved {
+          background-color: green;
+        }
+
+        &.Canceled {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.arrow-down {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  vertical-align: middle;
+  border: solid $clr8;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  // transition: transform 0.3s ;
+}
+
+.arrow-down.open {
+  transform: rotate(222deg);
+}
+
+.dropdown-menu {
+  // width: 100%;
+  position: absolute;
+  top: 90%;
+  left: -7px;
+  // right: 2px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: $clr11;
+  z-index: 3;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.5s;
+
+  li {
+    background-color: inherit;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $clr13;
+    }
+  }
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .main-layout {
+    grid-template-columns: none;
+  }
+
+  .my-trips-header {
+    padding-left: 20px;
+  }
+}

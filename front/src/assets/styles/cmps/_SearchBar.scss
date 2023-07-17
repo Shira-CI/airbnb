@@ -1,0 +1,80 @@
+.search-bar {
+    width: 397px;
+    height: 48px;
+    border-radius: 25px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid $clr12;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-top: 0;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        transition: 0.3s;
+    }
+
+    &.hide {
+        visibility: hidden;
+        transition: none;
+    }
+
+    button {
+        background-color: inherit;
+        color: black;
+        font-size: rem(14px);
+    }
+
+    .anywhere-search-btn {
+        border-right: 1px solid $clr12 ;
+        width: 107px;
+        color: $clr8;
+        font-family: airbnb-cereal-bold;
+        height: 50%;
+        align-self: center;
+        opacity: 0.85;
+    }
+
+    .anyweek-search-btn {
+        border-right: 1px solid $clr12 ;
+        width: 98px;
+        font-family: airbnb-cereal-bold;
+        color: $clr8;
+        height: 50%;
+        align-self: center;
+        opacity: 0.85;
+
+        p {
+            transform: translateX(-5px);
+        }
+    }
+
+    .add-guests-search-btn {
+        width: 106px;
+        font-family: airbnb-cereal-W_Bk;
+        color: $clr17;
+        // display: flex;
+        align-self: center;
+
+        height: 50%;
+
+    }
+
+    .search-btn {
+        background-color: #FF385C;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        padding-top: 3px;
+        margin-top: 6px;
+        margin-left: 4%;
+        margin-right: 6px;
+
+        i {
+            color: white;
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+    }
+}

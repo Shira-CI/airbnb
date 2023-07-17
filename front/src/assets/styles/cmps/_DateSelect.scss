@@ -1,0 +1,37 @@
+.check-in-pick {
+  position: absolute;
+  background-color: $clr11;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  border-radius: 30px;
+  border: 1px solid $clr12;
+  margin-top: 10px;
+  transform: translateY(15%);
+  visibility: visible;
+
+  .rdp {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .rdp-months {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    --rdp-cell-size: 46px;
+
+    .rdp-day_selected {
+      background-color: $clr13;
+      color: black;
+    }
+
+    .rdp-day_range_start.rdp-day_selected,
+    .rdp-day_range_end.rdp-day_selected {
+      background-color: black;
+      border-radius: 50% !important;
+      color: white;
+    }
+  }
+}

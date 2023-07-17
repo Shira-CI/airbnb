@@ -1,0 +1,91 @@
+.app-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    min-height: 80px;
+    background-color: $clr11;
+    position: fixed;
+    padding: 10px;
+    border-bottom: 1px solid;
+    border-bottom-color: $clr12;
+    z-index: 100;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-content: space-between;
+
+    &.search-bar-open {
+        height: 160px;
+        align-content: baseline;
+    }
+
+    &.header-block {
+        grid-template-columns: 1fr 1120px 1fr;
+
+        position: absolute;
+        padding: 0;
+
+        >* {
+            grid-column: 2;
+            align-self: center;
+            grid-row: 1;
+        }
+
+        .search-bar {
+            width: 300px;
+            justify-content: space-between;
+            padding-right: 5px;
+
+            .add-guests-search-btn {
+                flex: 1;
+                text-align: left;
+                padding-left: 20px;
+            }
+        }
+
+        .expanded-search-bar {
+            position: relative;
+            margin: 0 auto;
+            top: 0;
+            left: 0;
+            translate: -5% 120%;
+        }
+
+    }
+
+    .main-screen-full {
+        position: fixed;
+        top: 160px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .main-logo-container {
+        width: 30px;
+        height: 32px;
+        border: none;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .main-logo {
+        cursor: pointer;
+        justify-self: start;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        align-self: center;
+    }
+
+    .logo-txt {
+        padding-left: 7px;
+        font-family:airbnb-cereal-W_Md;
+        font-weight: bolder;
+        color: $clr1;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+
+}

@@ -1,0 +1,460 @@
+[{
+    "name": "Westin Kaanapali KORVN 2BR",
+    "type": "National parks",
+    "imgUrls": [
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"
+    ],
+    "price": 595,
+    "summary": "Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.",
+    "capacity": 8,
+    "amenities": [
+      "TV",
+      "Cable TV",
+      "Internet",
+      "Wifi",
+      "Air conditioning",
+      "Wheelchair accessible",
+      "Pool",
+      "Kitchen",
+      "Free parking on premises",
+      "Doorman",
+      "Gym",
+      "Elevator",
+      "Hot tub",
+      "Heating",
+      "Family/kid friendly",
+      "Suitable for events",
+      "Washer",
+      "Dryer",
+      "Smoke detector",
+      "Carbon monoxide detector",
+      "First aid kit",
+      "Safety card",
+      "Fire extinguisher",
+      "Essentials",
+      "Shampoo",
+      "24-hour check-in",
+      "Hangers",
+      "Hair dryer",
+      "Iron",
+      "Laptop friendly workspace",
+      "Self check-in",
+      "Building staff",
+      "Private entrance",
+      "Room-darkening shades",
+      "Hot water",
+      "Bed linens",
+      "Extra pillows and blankets",
+      "Ethernet connection",
+      "Luggage dropoff allowed",
+      "Long term stays allowed",
+      "Ground floor access",
+      "Wide hallway clearance",
+      "Step-free access",
+      "Wide doorway",
+      "Flat path to front door",
+      "Well-lit path to entrance",
+      "Disabled parking spot",
+      "Step-free access",
+      "Wide doorway",
+      "Wide clearance to bed",
+      "Step-free access",
+      "Wide doorway",
+      "Step-free access",
+      "Wide entryway",
+      "Waterfront",
+      "Beachfront"
+    ],
+    "bathrooms": 2,
+    "bedrooms": 2,
+    "roomType": "Entire home/apt",
+    "host": {
+      "_id": "622f3403e36c59e6164faf93",
+      "fullname": "Patty And Beckett",
+      "location": "Eureka, California, United States",
+      "about": "Adventurous couple loves to travel :)",
+      "responseTime": "within an hour",
+      "isSuperhost": true,
+      "id": "36133410"
+    },
+    "loc": {
+      "country": "United States",
+      "countryCode": "US",
+      "city": "Maui",
+      "address": "Lahaina, HI, United States",
+      "lat": -156.6917,
+      "lan": 20.93792
+    },
+    "reviews": [
+      {
+        "at": "2016-06-12T04:00:00.000Z",
+        "by": {
+          "_id": "622f3407e36c59e6164fc004",
+          "fullname": "Kiesha",
+          "id": "10711825"
+        },
+        "txt": "I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter.",
+        "rate": {
+          "cleanliness": 4.4,
+          "communication": 4.4,
+          "checkIn": 4.3,
+          "accuracy": 4.2,
+          "location": 4.5,
+          "value": 4.5
+        }
+      },
+      {
+        "at": "2016-07-28T04:00:00.000Z",
+        "by": {
+          "_id": "622f3403e36c59e6164fb204",
+          "fullname": "Chris",
+          "id": "70072865"
+        },
+        "txt": "Peter quickly responded to any questions I had before, and during the trip. Will use again, highly recommend. ",
+        "rate": {
+          "cleanliness": 4.7,
+          "communication": 4.4,
+          "checkIn": 4.2,
+          "accuracy": 5,
+          "location": 4.1,
+          "value": 4.2
+        }
+      },
+      {
+        "at": "2016-09-11T04:00:00.000Z",
+        "by": {
+          "_id": "622f3405e36c59e6164fb703",
+          "fullname": "Kim",
+          "id": "71179725"
+        },
+        "txt": "We had the perfect location for a room, first floor right in front of the pool. The resort is beautiful, and the staff is so friendly! I enjoyed it so much, we talked about buying a timeshare ourselves.",
+        "rate": {
+          "cleanliness": 4.9,
+          "communication": 4.9,
+          "checkIn": 4.5,
+          "accuracy": 4.8,
+          "location": 4.7,
+          "value": 4.1
+        }
+      },
+      {
+        "at": "2017-01-07T05:00:00.000Z",
+        "by": {
+          "_id": "622f3404e36c59e6164fb37f",
+          "fullname": "Tracy",
+          "id": "65593239"
+        },
+        "txt": "Beautiful location. Patty & Peter were super helpful and easy to work with!",
+        "rate": {
+          "cleanliness": 5,
+          "communication": 4,
+          "checkIn": 4.8,
+          "accuracy": 4.1,
+          "location": 4.7,
+          "value": 4.8
+        }
+      },
+      {
+        "at": "2017-04-07T04:00:00.000Z",
+        "by": {
+          "_id": "622f3403e36c59e6164fb105",
+          "fullname": "Duyen",
+          "id": "26215688"
+        },
+        "txt": "Great spot for the kids and family and close to beach and everything at the resort. We will definitely be back.",
+        "rate": {
+          "cleanliness": 4.5,
+          "communication": 4.5,
+          "checkIn": 4.5,
+          "accuracy": 4.7,
+          "location": 4.7,
+          "value": 5
+        }
+      },
+      {
+        "at": "2017-05-09T04:00:00.000Z",
+        "by": {
+          "_id": "622f3402e36c59e6164fabbe",
+          "fullname": "Binh",
+          "id": "117390236"
+        },
+        "txt": "The unit and the Westin offer variety of amenities you can possibly ask for. Sofa beds are very comfortable to sleep in. But there is charge for ocean view upgrade. Overall, I highly recommend to book with Patty and Peter. ",
+        "rate": {
+          "cleanliness": 4.4,
+          "communication": 4.5,
+          "checkIn": 4.7,
+          "accuracy": 4.4,
+          "location": 4.7,
+          "value": 4.5
+        }
+      },
+      {
+        "at": "2018-02-24T05:00:00.000Z",
+        "by": {
+          "_id": "622f3404e36c59e6164fb4af",
+          "fullname": "Samy",
+          "id": "15143517"
+        },
+        "txt": "We spent a great week at Patty and Peter's place. The place was exactly as shown in the pictures, very comfortable, nice view, with all amenities. The resort is great with several pools, a long beach, many restaurants, and of course a lot of great activities all around.",
+        "rate": {
+          "cleanliness": 4.9,
+          "communication": 4.9,
+          "checkIn": 5,
+          "accuracy": 4.4,
+          "location": 4.4,
+          "value": 4.3
+        }
+      },
+      {
+        "at": "2018-06-16T04:00:00.000Z",
+        "by": {
+          "_id": "622f3405e36c59e6164fb87b",
+          "fullname": "Breanne",
+          "id": "78173091"
+        },
+        "txt": "This place was perfect for my family. We had plenty of room to spread out and the service could not have been any better",
+        "rate": {
+          "cleanliness": 4.2,
+          "communication": 4.4,
+          "checkIn": 4.4,
+          "accuracy": 4.3,
+          "location": 4.1,
+          "value": 4.2
+        }
+      },
+      {
+        "at": "2018-06-29T04:00:00.000Z",
+        "by": {
+          "_id": "622f3405e36c59e6164fb713",
+          "fullname": "Kimberly",
+          "id": "100535039"
+        },
+        "txt": "We love Westin Kaanapalli",
+        "rate": {
+          "cleanliness": 4.6,
+          "communication": 4.5,
+          "checkIn": 4.7,
+          "accuracy": 4.3,
+          "location": 4.4,
+          "value": 4.9
+        }
+      }
+    ],
+    "likedByUsers": []
+  },
+  {
+    "name": "Belle chambre à côté Metro Papineau",
+    "type": "Campers",
+    "imgUrls": [
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437045/dmquvficldi8ssfdlrrx.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437033/rhw6gycttaimzocc1poz.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437330/mmhkmfvg8o3freucyekc.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436867/yocip4igdbruuh2grzpf.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436993/yzxnnw83e9qyas022au4.jpg"
+    ],
+    "price": 30,
+    "summary": "Chambre dans un bel appartement moderne avec balcon, ascenseur et terrasse. Private room in a beautiful modern apartment  with balcony, elevator and patio. La chambre est fermée avec une lit double. Vous aurez accès à une salle de bain avec une douche, terrasse. L'appartement est climatisé.  Votre chambre est équipé d'une connexion Wi-Fi illimité. Vous serez proche du centre ville, au pied du pont Jacques Cartier et à distance de marche de toutes les commodités (métro, supermarché, pharmacie",
+    "capacity": 2,
+    "amenities": [
+      "TV",
+      "Wifi",
+      "Air conditioning",
+      "Kitchen",
+      "Elevator",
+      "Buzzer/wireless intercom",
+      "Heating",
+      "Family/kid friendly",
+      "Washer",
+      "Dryer",
+      "Smoke detector",
+      "Carbon monoxide detector",
+      "Essentials",
+      "Iron",
+      "translation missing: en.hosting_amenity_50"
+    ],
+    "bathrooms": 1,
+    "bedrooms": 1,
+    "roomType": "Private room",
+    "host": {
+      "_id": "622f3401e36c59e6164fabab",
+      "fullname": "Angel",
+      "location": "Montreal, Québec, Canada",
+      "about": "",
+      "isSuperhost": false,
+      "id": "80344827"
+    },
+    "loc": {
+      "country": "Canada",
+      "countryCode": "CA",
+      "city": "Montreal",
+      "address": "Montréal, QC, Canada",
+      "lat": -73.54985,
+      "lan": 45.52797
+    },
+    "reviews": [
+      {
+        "at": "2016-07-07T04:00:00.000Z",
+        "by": {
+          "_id": "622f3407e36c59e6164fc058",
+          "fullname": "Rowan",
+          "id": "81703602"
+        },
+        "txt": "The place was great, as was the host! I would recommend staying here.",
+        "rate": {
+          "cleanliness": 4.1,
+          "communication": 4.6,
+          "checkIn": 4.5,
+          "accuracy": 4.3,
+          "location": 4.4,
+          "value": 4
+        }
+      },
+      {
+        "at": "2016-07-08T04:00:00.000Z",
+        "by": {
+          "_id": "622f3403e36c59e6164fb274",
+          "fullname": "Adriana",
+          "id": "64310987"
+        },
+        "txt": "J'ai adoré rester là. Très acceuillant.",
+        "rate": {
+          "cleanliness": 4.2,
+          "communication": 4.5,
+          "checkIn": 4.2,
+          "accuracy": 4.8,
+          "location": 4.3,
+          "value": 4.9
+        }
+      },
+      {
+        "at": "2016-07-12T04:00:00.000Z",
+        "by": {
+          "_id": "622f3405e36c59e6164fb87c",
+          "fullname": "Emma",
+          "id": "23709900"
+        },
+        "txt": "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !",
+        "rate": {
+          "cleanliness": 4.1,
+          "communication": 4.5,
+          "checkIn": 4.2,
+          "accuracy": 5,
+          "location": 4.4,
+          "value": 4.9
+        }
+      },
+      {
+        "at": "2016-08-02T04:00:00.000Z",
+        "by": {
+          "_id": "622f3408e36c59e6164fc082",
+          "fullname": "Jeffery",
+          "id": "44882622"
+        },
+        "txt": "Angel was warm and welcoming and has a beautiful apartment. I'd recommend his place to anyone visiting downtown Montreal!",
+        "rate": {
+          "cleanliness": 4,
+          "communication": 4.7,
+          "checkIn": 4.2,
+          "accuracy": 4.9,
+          "location": 4.9,
+          "value": 4.9
+        }
+      }
+    ],
+    "likedByUsers": []
+  },
+  {
+    "name": "M&M Space MM2  Apartamento no centro da cidade",
+    "type": "Campers",
+    "imgUrls": [
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436861/xrxhgsif3ekhxgn8irlm.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436556/mb70fifvvpvde8jub5cg.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437241/wt0seud4ot4cmdrztdzz.jpg",
+      "http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437308/p80ndulkcghpcfsnvjdo.jpg"
+    ],
+    "price": 65,
+    "summary": "O apartamento fica perto de arte e cultura e dos mais belos monumentos da cidade. Belos jardins e paisagens da cidade e do rio Douro ficam perto e podem ser apreciadas.  Existem restaurantes típicos e de comida internacional ao redor do apartamento.   O espaço fica numa rua típica da cidade, cheia da sua magia e magnetismo e é muito pratico e confortável. O espaço é excelente para quem pretende visitar e conhecer a zona histórica e turística do Porto. Transportes públicos ficam próximos.",
+    "capacity": 4,
+    "amenities": [
+      "TV",
+      "Cable TV",
+      "Internet",
+      "Wifi",
+      "Air conditioning",
+      "Kitchen",
+      "Paid parking off premises",
+      "Free street parking",
+      "Buzzer/wireless intercom",
+      "Family/kid friendly",
+      "Washer",
+      "Smoke detector",
+      "First aid kit",
+      "Fire extinguisher",
+      "Essentials",
+      "Shampoo",
+      "Lock on bedroom door",
+      "24-hour check-in",
+      "Hangers",
+      "Hair dryer",
+      "Iron",
+      "Laptop friendly workspace",
+      "Private entrance",
+      "Crib",
+      "Room-darkening shades",
+      "Hot water",
+      "Bed linens",
+      "Extra pillows and blankets",
+      "Microwave",
+      "Coffee maker",
+      "Refrigerator",
+      "Dishwasher",
+      "Dishes and silverware",
+      "Cooking basics",
+      "Oven",
+      "Stove",
+      "Patio or balcony",
+      "Luggage dropoff allowed",
+      "Long term stays allowed",
+      "Wide doorway",
+      "Well-lit path to entrance",
+      "Step-free access",
+      "Wide doorway",
+      "Accessible-height bed",
+      "Step-free access",
+      "Wide doorway",
+      "Accessible-height toilet",
+      "Step-free access",
+      "Wide entryway",
+      "Host greets you",
+      "Handheld shower head",
+      "Paid parking on premises",
+      "Fixed grab bars for shower"
+    ],
+    "bathrooms": 1,
+    "bedrooms": 2,
+    "roomType": "Entire home/apt",
+    "host": {
+      "_id": "622f3403e36c59e6164fb266",
+      "fullname": "Maria",
+      "location": "Porto, Porto District, Portugal",
+      "about": "Simples, muito comunicativa, mas de elevado sentido de responsabilidade, de organização e de confiança.\r\nGosto muito de contacto humano, sem o qual não me sinto estável. Adoro conhecer pessoas de culturas diferentes.\r\nFaço várias viagens, mas de curta duração, pois tenho necessidade de sentir o lar e a família. Por ser assim, tento fazer tudo para que os meus hospedes se sintam confortáveis como em suas casas.",
+      "responseTime": "within an hour",
+      "isSuperhost": true,
+      "id": "78704763"
+    },
+    "loc": {
+      "country": "Portugal",
+      "countryCode": "PT",
+      "city": "Porto",
+      "address": "Porto, Porto, Portugal",
+      "lat": -8.60154,
+      "lan": 41.14834
+    },
+    "reviews": []
+  }
+]

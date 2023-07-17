@@ -1,0 +1,30 @@
+.counter-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 104px;
+    height: 32px;
+
+    button {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        border: 1px solid black;
+        color: $clr13;
+        align-items: center;
+        justify-content: center;
+        background: $clr13;
+        border-radius: 50%;
+
+     
+        &:disabled {
+            cursor: not-allowed;
+            color: $clr13;
+            border-color: $clr13 ;
+        }
+    }
+
+}

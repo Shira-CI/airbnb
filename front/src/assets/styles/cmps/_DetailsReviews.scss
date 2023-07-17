@@ -1,0 +1,136 @@
+.reviews-details-wrapper {
+  padding-block: 48px;
+  .rating-details-data {
+    display: flex;
+    align-items: center;
+    font-size: rem(22px);
+    font-family: cereal-Medium;
+    margin-bottom: 32px;
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+    .space-dot {
+      padding-inline: 4px;
+    }
+    a {
+      cursor: text;
+    }
+  }
+  .reviews-avg-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 36px);
+    padding-bottom: 24px;
+    ul {
+      list-style: none;
+      padding-inline: 0;
+      padding-block: 0;
+      margin-block: 0;
+      margin-inline: 0;
+      .avg-data-wrapper {
+        display: flex;
+        justify-content: space-between;
+        line-height: 36px;
+        margin-inline-end: 102px;
+        align-items: center;
+        .avg-type {
+          font-size: rem(16px);
+          font-family: cereal-Regular;
+          text-transform: capitalize;
+        }
+        .avg-num {
+          display: flex;
+          align-items: center;
+          font-size: rem(12px);
+          font-family: cereal-Bold;
+        }
+        progress {
+          display: flex;
+          align-items: flex-end;
+          border-radius: 2px;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26) inset;
+          height: 4px;
+          max-width: 100px;
+          margin-inline-end: 8px;
+        }
+        progress::-webkit-progress-bar {
+          background-color: #b9b9b9;
+        }
+        progress::-webkit-progress-value {
+          background-color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+}
+
+.reviews-wrapper {
+  display: grid;
+  position: relative;
+  max-width: 1136px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  .user-review {
+    margin-bottom: 40px;
+    margin-inline-end: 100px;
+    height: 196px;
+    a {
+      text-decoration: none;
+      text-decoration: underline;
+      font-family: circular-Book;
+      font-size: rem(16px);
+    }
+    .user-review-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-inline-end: 16px;
+    }
+    .review-head-txt {
+      h2 {
+        margin: 0;
+        font-size: rem(16px);
+        font-family: cereal-Regular;
+      }
+      p {
+        margin: 0;
+        font-size: rem(16px);
+        font-family: cereal-Regular;
+      }
+    }
+  }
+  .user-review-body {
+    p {
+      font-size: rem(16px);
+      font-family: cereal-Regular;
+      margin: 0;
+    }
+  }
+}
+.show-all-reviews-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  button {
+    background-color: #f7f7f7;
+    border: 1px solid black;
+    padding: 13px 23px;
+    margin: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: cereal-Medium;
+    font-size: rem(14px);
+    color: #222222;
+    &:hover {
+      filter: brightness(95%);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

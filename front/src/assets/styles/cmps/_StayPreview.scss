@@ -1,0 +1,103 @@
+.stay-preview-container {
+    width: 100%;
+    list-style: none;
+
+    .stay-preview {
+        height: 100%;
+        width: 100%;
+        font-size: 15px;
+        line-height: 20px;
+        cursor: pointer;
+        position: relative;
+
+        .stay-preview-hurt{
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 14px;
+            right: 14px;
+        }
+
+        .stay-preview-txt {
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 16.5%;
+            font-family: Circular, sans-serif;
+
+            .stay-preview-star {
+                grid-column: -2 / -1;
+                grid-row: 1;
+                justify-self: end;
+                display: flex;
+
+                img {
+                    width: 12px;
+                    height: 12px;
+                    position: relative;
+                    top: 3px;
+                    right: 4px;
+                }
+            }
+
+            .stay-preview-location {
+                color: rgb(34, 34, 34);
+                font-weight: 600;
+            }
+
+            .stay-preview-distance {
+                grid-column: 1;
+                color: rgb(113, 113, 113);
+            }
+
+            .stay-preview-price {
+                grid-column: 1;
+                line-height: 36px;
+                font-weight: 600;
+                color: $clr8;
+
+                .stay-preview-night {
+                    font-weight: 400;
+                }
+            }
+
+            .stay-preview-dates {
+                grid-column: 1;
+                line-height: 21px;
+                color: $clr15;
+            }
+        }
+
+        
+    @include for-wide-layout {
+        @media (min-width: $wide-breakpoint) {
+            // grid-template-columns: repeat(4, 1fr);
+            height: 390px;
+        }
+    }
+
+        @include for-extra-wide-layout {
+            @media (min-width: $extra-wide-breakpoint) {
+                height: 363px;
+
+            }
+        }
+
+        @media (min-width: 1750px) {
+            height: 350px;
+        }
+    }
+
+    .stay-preview-image-container {
+        width: 100%;
+        height: 72.6%;
+        background-color: pink;
+        margin-block-end: 12px;
+    }
+
+    .stay-preview-image {
+        border-radius: 4%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

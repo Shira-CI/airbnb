@@ -1,0 +1,24 @@
+
+.sub-header-details-right {
+    .save-share-details {
+      display: flex;
+      align-items: center;
+      & :hover{
+        background-color: #F7F7F7;
+        border-radius: 8px;
+      }
+      a {
+        display: flex;
+        font-family: cereal-Medium;
+        align-items: center;
+        padding: 8px;
+        text-decoration: underline;
+        font-size: rem(14px);
+      }
+      img {
+        margin-inline: 8px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
