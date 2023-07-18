@@ -22,7 +22,7 @@ function _buildCriteria(filterBy) {
 async function query(filterBy) {
   try {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     var stayCursor = await collection.find(criteria)
 
     // if (filterBy.pageIdx !== undefined) {
@@ -39,7 +39,7 @@ async function query(filterBy) {
 
 async function getById(stayId) {
   try {
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     const stay = collection.findOne({ _id: ObjectId(stayId) })
     return stay
   } catch (err) {
@@ -50,7 +50,7 @@ async function getById(stayId) {
 
 async function remove(stayId) {
   try {
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     await collection.deleteOne({ _id: ObjectId(stayId) })
     return stayId
   } catch (err) {
@@ -61,7 +61,7 @@ async function remove(stayId) {
 
 async function add(stay) {
   try {
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     await collection.insertOne(stay)
     return stay
   } catch (err) {
@@ -89,7 +89,7 @@ async function update(stay) {
       likedByUsers: stay.likedByUsers,
       amenities: stay.amenities
     }
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     await collection.updateOne(
       { _id: ObjectId(stay._id) },
       { $set: stayToSave }
@@ -107,7 +107,7 @@ async function update(stay) {
 async function addStayMsg(stayId, msg) {
   try {
     msg.id = utilService.makeId()
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     await collection.updateOne(
       { _id: ObjectId(stayId) },
       { $push: { msgs: msg } }
@@ -121,7 +121,7 @@ async function addStayMsg(stayId, msg) {
 
 async function removeStayMsg(stayId, msgId) {
   try {
-    const collection = await dbService.getCollection('stay_collection')
+    const collection = await dbService.getCollection('stay_new')
     await collection.updateOne(
       { _id: ObjectId(stayId) },
       { $pull: { msgs: { id: msgId } } }

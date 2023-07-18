@@ -25,7 +25,6 @@ export const AmenitiesModal = ({
     'Private-patio',
     'Shampoo',
     'Smoke alarm',
-    'TV',
     'Washer machine',
     'Wifi',
   ]
