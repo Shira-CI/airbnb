@@ -3,19 +3,52 @@ import { filterService } from "../services/filter.service"
 
 
 export function LabelsCarousel() {
+    const [isDragging, setIsDragging] = useState(false)
     const categories = filterService.getCategories()
     const carouselRef = useRef(null)
-    const [isDragging, setIsDragging] = useState(false)
-    // console.log('isDragging 1' , isDragging)
-    // console.log('refresh /////////' )
+    const arrowLeftRef = useRef(null)
+    const arrowRightRef = useRef(null)
+    const categoryRef = useRef(null)
 
-    let carouselElement , startX, startScrollLeft
+    let carouselElement , startX, startScrollLeft , categoryElement , firstCategoryWidth, movingWidth
+    // let carouselElement , startX, startScrollLeft , arrowLeftElement , arrowRightElement
     const savedIsDragging = useRef(false);
 
 
     useEffect(()=>{
         savedIsDragging.current= isDragging
     }, [isDragging])
+
+
+    useEffect(()=>{
+        categoryElement = categoryRef.current
+        if(!categoryElement) return
+     firstCategoryWidth = categoryElement.offsetWidth
+}, [])
+
+
+    useEffect(()=>{
+
+       const arrowsElements = {
+            arrowLeftElement : arrowLeftRef.current,
+            arrowRightElement : arrowRightRef.current
+        }
+
+        for (const key in arrowsElements) {
+            const arrowElement = arrowsElements[key]
+            arrowElement.addEventListener('click', () => {
+                // console.log(arrowElement.id)
+                // carouselElement.scrollLeft += arrowElement.id === 'left' ? -firstCategoryWidth : firstCategoryWidth
+                // console.log(carouselElement.offsetWidth)
+                movingWidth = carouselElement.offsetWidth - 230
+                // console.log(movingWidth)
+                carouselElement.scrollLeft += arrowElement.id === 'left' ? -movingWidth : movingWidth
+            })
+          }
+    }, [])
+
+
+
     
     useEffect(() => {
         carouselElement = carouselRef.current
@@ -58,10 +91,10 @@ export function LabelsCarousel() {
     if (!categories) return
     return (
         <div className="wrapper">
-            <i className="material-symbols-outlined arrow-left">arrow_back_ios</i>
+            <i className="material-symbols-outlined arrow-left" ref={arrowLeftRef} id="left">arrow_back_ios</i>
             <ul className="carousel" ref={carouselRef}>
                 {categories.map((category, idx) => {
-                    return (<li className="category" key={idx}>
+                    return (<li className="category" key={idx} ref={categoryRef}>
                         <div className="category-img">
                             <img src={require(`../assets/img/categories/${category.url}.png`)}
                                 alt={category.url}
@@ -82,7 +115,7 @@ export function LabelsCarousel() {
             </ul>
 
 
-            <i className="material-symbols-outlined arrow-right">arrow_forward_ios</i>
+            <i className="material-symbols-outlined arrow-right" ref={arrowRightRef} id="right">arrow_forward_ios</i>
         </div>
     )
 }
