@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router"
 
-export const CarouselItemLabels = ({ page, width }) => {
+export const CarouselItemLabels = ({ category, width }) => {
   const [isActive, setIsActive] = useState("")
   const navigate = useNavigate()
 
@@ -11,10 +11,20 @@ export const CarouselItemLabels = ({ page, width }) => {
   }
 
 
-
   return (
-    <div className="carousel-item" style={{ width: width }}>
-      {page.map((icon, index) => {
+    <div className="carousel-item-labels" >
+    {/* <div className="carousel-item" style={{ width: width }}> */}
+      <span
+        onClick={() => helloFromLabel(category.name)}
+        className={`category-carousel-item ${isActive === category.name ? 'active' : ''}`}
+      ></span>
+      <img className="category-icon"
+        style={{ width: '25px', height: '25px' }}
+        src={require(`../assets/img/categories/${category.url}.png`)}
+        alt={category.url}
+      />
+
+      {/* {page.map((icon, index) => {
         return (
           <span
             onClick={() => helloFromLabel(icon.name)} key={index}
@@ -28,7 +38,7 @@ export const CarouselItemLabels = ({ page, width }) => {
             <p className='category-name'>{icon.name}</p>
           </span>
         )
-      })}
+      })} */}
 
     </div>
 

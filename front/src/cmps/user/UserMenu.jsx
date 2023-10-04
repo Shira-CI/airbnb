@@ -21,7 +21,7 @@ export function UserMenu() {
         setIsLoggedIn(user)
     }, [user])
 
-    console.log(isLoggedIn)
+    // console.log(isLoggedIn)
     async function onLogout() {
         try {
             navigate('/')

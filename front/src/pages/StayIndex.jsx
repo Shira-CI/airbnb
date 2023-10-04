@@ -11,6 +11,8 @@ import { setStayId } from '../store/stay.actions.js'
 import { setFooterToDisplay } from '../store/stay.actions.js'
 import { Loader } from '../cmps/Loader.jsx'
 
+import {LabelsCarousel} from '../cmps/LabelsCarousel.jsx'
+
 export function StayIndex() {
   // const [stay, setStay] = useState(null)
   const isLoading = useSelector(storeState => storeState.stayModule.isLoading)
@@ -56,7 +58,8 @@ export function StayIndex() {
 
   return (
     <section className="index-container">
-      <LabelsFilter />
+      {/* <LabelsFilter /> */}
+      <LabelsCarousel/>
       <StayList stays={stays} />
     </section>
   )

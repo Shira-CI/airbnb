@@ -136,10 +136,10 @@ export const StayDetails = () => {
           />
 
           <hr className="custom-hr" />
-          <DetailsAmenities
+          {/* <DetailsAmenities
             amenities={stay.amenities}
             onOpenModal={onOpenModal}
-          />
+          /> */}
 
           <hr className="custom-hr" />
 
@@ -194,11 +194,11 @@ export const StayDetails = () => {
           reviewsModalIsOpen={reviewsModalIsOpen}
           onCloseModal={onCloseModal}
         />
-        <AmenitiesModal
+        {/* <AmenitiesModal
           amenities={stay.amenities}
           amenitiesModalIsOpen={amenitiesModalIsOpen}
           onCloseModal={onCloseModal}
-        />
+        /> */}
         <ShareModal
           shareModalIsOpen={shareModalIsOpen}
           onCloseModal={onCloseModal}

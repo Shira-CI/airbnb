@@ -12,7 +12,6 @@ export function Carousel({ stay }) {
     } else if (newIndex >= stay.imgUrls.length) {
       // newIndex = 0
       newIndex = stay.imgUrls.length - 1
-
     }
     setActiveIndex(newIndex)
   }

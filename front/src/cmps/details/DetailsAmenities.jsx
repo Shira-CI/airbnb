@@ -19,7 +19,7 @@ export const DetailsAmenities = ({ amenities, onOpenModal }) => {
     'Shampoo',
     'Smoke alarm',
     'Washer machine',
-    // 'TV',
+  
     'Wifi',
   ]
 

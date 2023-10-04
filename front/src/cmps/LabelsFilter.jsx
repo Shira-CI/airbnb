@@ -12,7 +12,7 @@ export  function LabelsFilter() {
   return (
     <section className="categories-container">
       {/* <section className="categories"> */}
-        <CarouselLabels categories = {categories} />
+        {/* <CarouselLabels categories = {categories} /> */}
 
       {/* {categories.map((category) => { */}
         {/* return ( */}

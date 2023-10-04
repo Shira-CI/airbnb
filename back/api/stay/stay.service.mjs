@@ -22,7 +22,8 @@ function _buildCriteria(filterBy) {
 async function query(filterBy) {
   try {
     const criteria = _buildCriteria(filterBy)
-    const collection = await dbService.getCollection('stay_new')
+    // const collection = await dbService.getCollection('stay_new')
+    const collection = await dbService.getCollection('stay')
     var stayCursor = await collection.find(criteria)
 
     // if (filterBy.pageIdx !== undefined) {
@@ -39,7 +40,8 @@ async function query(filterBy) {
 
 async function getById(stayId) {
   try {
-    const collection = await dbService.getCollection('stay_new')
+    // const collection = await dbService.getCollection('stay_new')
+    const collection = await dbService.getCollection('stay')
     const stay = collection.findOne({ _id: ObjectId(stayId) })
     return stay
   } catch (err) {
@@ -50,7 +52,8 @@ async function getById(stayId) {
 
 async function remove(stayId) {
   try {
-    const collection = await dbService.getCollection('stay_new')
+    // const collection = await dbService.getCollection('stay_new')
+    const collection = await dbService.getCollection('stay')
     await collection.deleteOne({ _id: ObjectId(stayId) })
     return stayId
   } catch (err) {
@@ -61,7 +64,8 @@ async function remove(stayId) {
 
 async function add(stay) {
   try {
-    const collection = await dbService.getCollection('stay_new')
+    // const collection = await dbService.getCollection('stay_new')
+    const collection = await dbService.getCollection('stay')
     await collection.insertOne(stay)
     return stay
   } catch (err) {
@@ -89,14 +93,16 @@ async function update(stay) {
       likedByUsers: stay.likedByUsers,
       amenities: stay.amenities
     }
-    const collection = await dbService.getCollection('stay_new')
+    // const collection = await dbService.getCollection('stay_new')
+    const collection = await dbService.getCollection('stay')
     await collection.updateOne(
       { _id: ObjectId(stay._id) },
       { $set: stayToSave }
     )
     return stay
   } catch (err) {
-    logger.error(`cannot update stay ${stayId}`, err)
+    // logger.error(`cannot update stay ${stayId}`, err)
+    logger.error(`cannot update stay ${stay._id}`, err)
     throw err
   }
 }
