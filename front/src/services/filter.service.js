@@ -231,10 +231,7 @@ function getCategories() {
       name: 'Tiny homes',
       url: 'tiny-homes',
     },
-    {
-      name: 'Off-the-grid',
-      url: 'off-the-grid',
-    },
+ 
     {
       name: 'Beach',
       url: 'beach',
@@ -255,14 +252,7 @@ function getCategories() {
       name: 'Iconic cities',
       url: 'iconic-cities',
     },
-    {
-      name: 'Historical homes',
-      url: 'historical-homes',
-    },
-    {
-      name: 'National parks',
-      url: 'national-parks',
-    },
+
     {
       name: 'Play',
       url: 'play',
@@ -288,6 +278,10 @@ function getCategories() {
       url: 'arctic',
     },
     {
+      name: 'National parks',
+      url: 'national-parks',
+    },
+    {
       name: 'New',
       url: 'new',
     },
@@ -295,6 +289,7 @@ function getCategories() {
       name: 'Vineyards',
       url: 'vineyards',
     },
+
     {
       name: 'Caves',
       url: 'caves',
@@ -316,7 +311,7 @@ function getCategories() {
       url: 'campings',
     },
     {
-      name: 'Top of the world',
+      name: 'Top',
       url: 'top-of-the-world',
     },
     {

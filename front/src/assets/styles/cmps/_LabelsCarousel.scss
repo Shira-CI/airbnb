@@ -1,14 +1,14 @@
 .wrapper {
     max-width: calc(100vw - 160px);
     margin: 0;
-    margin-top: 20px;
+    // margin-top: 20px;
     position: relative;
 
     .category .category-img img {
         width: 24px;
         height: 24px;
         object-fit: cover;
-        opacity: 0.6;
+
     }
 
     i {
@@ -62,34 +62,56 @@
     }
 
     .labelsCarousel {
+
         display: grid;
         grid-auto-flow: column;
-        gap: 24px;
+        gap: 26px;
         overflow: hidden;
         margin: 0;
         scroll-behavior: smooth;
         padding: 0 10px;
+        height: 78px;
 
 
 
         .category {
-            height: 48px;
+            height: 100%;
             list-style: none;
-            display: inline-flex;
+            display:flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             font-size: 0.6667em;
             font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-            color: #717171;
-            row-gap: 8px;
+            color: rgb(10, 10, 10);
             text-align: center;
-            min-width: 56px;
             line-height: 16px;
             cursor: pointer;
+            font-weight: 600;
+            opacity: 0.6;
+            position: relative;
+            padding: 2px 0;
 
-            .category-name {
-                overflow: hidden;
+            .category-name span {
+                white-space: nowrap;
             }
+
+            &:hover {
+                opacity: 0.85;
+                transition: 0.2s;
+            }
+
+            &:hover::after {
+                content: "";
+                position: absolute;
+                bottom: 4px;
+                width: 100%;
+                height: 2px;
+                background-color: #DDDDDD;
+            }
+
+
+
         }
 
     }
