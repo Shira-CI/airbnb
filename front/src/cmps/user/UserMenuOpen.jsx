@@ -13,10 +13,10 @@ export function UserMenuOpen({ user, onOpenModal, onLogout }) {
             <section ref={userMenuRef} className="user-menu-modal">
                 {!user ? (
                     <section className='menu-links'>
-                        <Link onClick={(e) => onOpenModal(e, 'login-modal', false)} data-modal="login-modal" className="login-modal">
+                        <Link onClick={(e) => onOpenModal(e, 'login-modal', false)} data-modal="login-modal" className="login-btn">
                             Log in
                         </Link>
-                        <Link onClick={(e) => onOpenModal(e, 'login-modal', true)} data-modal="login-modal" className="login-modal">
+                        <Link onClick={(e) => onOpenModal(e, 'login-modal', true)} data-modal="login-modal" className="signup-btn">
                             Sign up
                         </Link>
                         {/* <Link onClick={(e) => onOpenModal(e, 'signup-modal', true)} data-modal="signup-modal" className="signup-modal">
