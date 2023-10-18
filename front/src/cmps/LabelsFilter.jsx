@@ -1,6 +1,6 @@
 import { filterService } from "../services/filter.service"
 import filterIcon from '../assets/img/icons/filter.svg'
-import { CarouselLabels } from "./CarouselLabels"
+// import { CarouselLabels } from "./CarouselLabels"
 
 
 

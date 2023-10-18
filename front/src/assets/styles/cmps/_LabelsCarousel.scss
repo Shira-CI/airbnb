@@ -1,5 +1,5 @@
 .wrapper {
-    width: 100%;
+    max-width: calc(100vw - 160px);
     margin: 0;
     margin-top: 20px;
     position: relative;
@@ -10,7 +10,7 @@
         object-fit: cover;
         opacity: 0.6;
     }
-  
+
     i {
         width: 28px;
         height: 28px;
@@ -26,7 +26,7 @@
         line-height: 26px;
         padding: 0;
         top: 50%;
-        transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%);
         transition: transform 0.2s ease;
 
         &:hover {
@@ -34,7 +34,7 @@
             transform: translate(-50%, -50%) scale(1.15);
             transition: transform 0.2s ease;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          }
+        }
     }
 
     .arrow-left {
@@ -44,6 +44,7 @@
     .arrow-right {
         right: 0;
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -55,22 +56,20 @@
         pointer-events: none;
     }
 
-    .dragging{
+    .dragging {
         cursor: grab;
         user-select: none;
     }
 
-    .carousel {
-        max-width: calc(100vw - 160px);
-        // grid-auto-columns: calc((100% / 16) );
+    .labelsCarousel {
         display: grid;
         grid-auto-flow: column;
-        gap: 26px;
+        gap: 24px;
         overflow: hidden;
-        height: 78px;
         margin: 0;
+        scroll-behavior: smooth;
+        padding: 0 10px;
 
-   
 
 
         .category {
@@ -80,7 +79,7 @@
             flex-direction: column;
             align-items: center;
             font-size: 0.6667em;
-            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
             color: #717171;
             row-gap: 8px;
             text-align: center;
@@ -95,37 +94,4 @@
 
     }
 
-
-    // $mobile-breakpoint: 460px;
-    // $narrow-breakpoint: 720px;
-    // $normal-breakpoint: 960px;
-    // $wide-breakpoint: 1100px;
-    // $extra-wide-breakpoint: 1400px;
-
-    @include for-mobile-layout {
-        // max-width: 1400px;
-    }
-
-    @include for-narrow-layout {
-        // max-width: 1400px;
-    }
-
-    @include for-normal-layout {
-        // max-width: 1400px;
-    }
-
-    @include for-wide-layout {
-        // max-width: 1400px;
-    }
-
-    @include for-extra-wide-layout {
-
-        .carousel {
-            // grid-auto-columns: calc(100% / 16);
-
-
-        }
-
-
-    }
 }

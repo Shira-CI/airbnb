@@ -5,54 +5,54 @@ import { filterService } from "../services/filter.service"
 export function LabelsCarousel() {
     const [isDragging, setIsDragging] = useState(false)
     const categories = filterService.getCategories()
+    console.log(categories)
     const carouselRef = useRef(null)
     const arrowLeftRef = useRef(null)
     const arrowRightRef = useRef(null)
     const categoryRef = useRef(null)
+    const savedIsDragging = useRef(false)
 
-    let carouselElement , startX, startScrollLeft , categoryElement , firstCategoryWidth, movingWidth
-    // let carouselElement , startX, startScrollLeft , arrowLeftElement , arrowRightElement
-    const savedIsDragging = useRef(false);
+    let carouselElement, startX, startScrollLeft, categoryElement, firstCategoryWidth, movingWidth
 
 
-    useEffect(()=>{
-        savedIsDragging.current= isDragging
+    useEffect(() => {
+        savedIsDragging.current = isDragging
     }, [isDragging])
 
 
-    useEffect(()=>{
-        categoryElement = categoryRef.current
-        if(!categoryElement) return
-     firstCategoryWidth = categoryElement.offsetWidth
-}, [])
+    // useEffect(() => {
+    //     categoryElement = categoryRef.current
+    //     if (!categoryElement) return
+    //     firstCategoryWidth = categoryElement.offsetWidth
+    // }, [])
 
 
-    useEffect(()=>{
-
-       const arrowsElements = {
-            arrowLeftElement : arrowLeftRef.current,
-            arrowRightElement : arrowRightRef.current
+    useEffect(() => {
+        const arrowsElements = {
+            arrowLeftElement: arrowLeftRef.current,
+            arrowRightElement: arrowRightRef.current
         }
+
 
         for (const key in arrowsElements) {
             const arrowElement = arrowsElements[key]
             arrowElement.addEventListener('click', () => {
+                // checkArrowVisibility()
                 // console.log(arrowElement.id)
-                // carouselElement.scrollLeft += arrowElement.id === 'left' ? -firstCategoryWidth : firstCategoryWidth
                 // console.log(carouselElement.offsetWidth)
-                movingWidth = carouselElement.offsetWidth - 230
+                // console.log(carouselElement.scrollLeft)
+                movingWidth = carouselElement.offsetWidth - 216
                 // console.log(movingWidth)
                 carouselElement.scrollLeft += arrowElement.id === 'left' ? -movingWidth : movingWidth
             })
-          }
+        }
     }, [])
 
 
 
-    
     useEffect(() => {
         carouselElement = carouselRef.current
-        if(!carouselElement) return
+        if (!carouselElement) return
         carouselElement.addEventListener('mousedown', dragStart)
         carouselElement.addEventListener('mousemove', dragging)
         document.addEventListener('mouseup', dragStop)
@@ -65,10 +65,19 @@ export function LabelsCarousel() {
 
     }, [])
 
+
+    function checkArrowVisibility() {
+        if (carouselElement.scrollLeft === 0) {
+            arrowLeftRef.current.style.display = 'none'
+        } else {
+            arrowLeftRef.current.style.display = 'block'
+        }
+    }
+
     function dragStart(e) {
-          if(!carouselElement) return
+        if (!carouselElement) return
         setIsDragging(true)
-        console.log('dragstart')
+        // console.log('dragstart')
         carouselElement.classList.add('dragging')
         startX = e.pageX
         startScrollLeft = carouselElement.scrollLeft
@@ -76,10 +85,10 @@ export function LabelsCarousel() {
     function dragging(e) {
         if (!savedIsDragging.current) return
 
-        carouselElement.scrollLeft = startScrollLeft - (e.pageX- startX)
+        carouselElement.scrollLeft = startScrollLeft - (e.pageX - startX)
     }
     function dragStop() {
-        console.log('dragstop')
+        // console.log('dragstop')
         setIsDragging(false)
         // console.log(isDragging)
         carouselElement.classList.remove('dragging')
@@ -92,25 +101,28 @@ export function LabelsCarousel() {
     return (
         <div className="wrapper">
             <i className="material-symbols-outlined arrow-left" ref={arrowLeftRef} id="left">arrow_back_ios</i>
-            <ul className="carousel" ref={carouselRef}>
+            <ul className="labelsCarousel" ref={carouselRef}>
                 {categories.map((category, idx) => {
-                    return (<li className="category" key={idx} ref={categoryRef}>
-                        <div className="category-img">
-                            <img src={require(`../assets/img/categories/${category.url}.png`)}
-                                alt={category.url}
-                                drragable="false" />
-                        </div>
 
-                        <div className='category-name'>
-                            <span>
+                        return (<li className="category" key={idx} ref={categoryRef}>
+                            <div className="category-img">
+                                <img src={require(`../assets/img/categories/${category.url}.png`)}
+                                    alt={category.url}
+                                //    { drragable="false"} 
+                                />
+                            </div>
 
-                                {category.name}
+                            <div className='category-name'>
+                                <span>
 
-                            </span>
-                        </div>
+                                    {category.name}
 
-                    </li>)
-                }
+                                </span>
+                            </div>
+
+                        </li>)
+                    }
+                
                 )}
             </ul>
 
