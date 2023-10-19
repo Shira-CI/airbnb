@@ -2,8 +2,9 @@ import { userService } from "../../services/user.service.js"
 
 import { useEffect, useState } from 'react'
 import { signup } from "../../store/user.action.js"
+import {ReserveButton} from '../orders/ReserveButton.jsx'
 
-export function CredentialsForm({ onSubmit  }) {
+export function CredentialsForm({ onSubmit, onCloseModal  }) {
     const [isSignUp , setIsSignUp]= useState(false)
 
     const [credentials, setCredentials] = useState(userService.getEmptyCredentials())
@@ -20,7 +21,9 @@ export function CredentialsForm({ onSubmit  }) {
 
     return (
         <section className="login"> 
+
         <form className="login-form" onSubmit={handleSubmit}>
+            <div className="user-details">
             <input
                 type="text"
                 name="username"
@@ -43,11 +46,14 @@ export function CredentialsForm({ onSubmit  }) {
                 onChange={handleChange}
                 required
             />}
-            <button>{isSignUp ? "Sign up" : "Log in"}</button>
+            </div>
+            <button className="login-signup-btn">{isSignUp ? "Sign up" : "Log in"}</button>
         </form>
         {!isSignUp &&
-            <button onClick={()=> setIsSignUp(true)}>Sign up</button>
+            <button onClick={()=> setIsSignUp(true)} className="signup-btn">Sign up</button>
         }
+        <ReserveButton children={'DEMO login'} className="demo-login-btn"/>
+
         </section>
     )
 }

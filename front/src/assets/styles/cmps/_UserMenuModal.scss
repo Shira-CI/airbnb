@@ -6,15 +6,15 @@
     right: 0;
     top: 100%;
     margin-top: 2px;
-    padding: 10px;
-    padding-right: 20px;
+    padding: 9px 0;
     box-shadow: 0px 2px 12px rgba(51, 51, 51, 0.15);
     border-radius: 12px;
     display: flex;
     white-space: nowrap;
+    width: 200px;
 
     .menu-links {
-        font-family: circular-Book;
+        // font-family: circular-Book;
         display: flex;
         flex-direction: column;
         font-size: 0.888em;
@@ -22,11 +22,16 @@
 
         .login-btn,
         .signup-btn {
-            border-bottom: 1px solid $clr12;
+            font-size: 0.9em;
+           font-family: cereal-Book;
+           padding:  8px 20px;
+           &:hover{
+            background-color: #f5f5f5ee;
+           }
         }
-
+        
         .login-btn {
-            margin-bottom: 7px;
+            font-family: cereal-Medium;
         }
 
 

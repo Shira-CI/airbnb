@@ -26,9 +26,8 @@
         background-position: center;
         background-size: cover;
         border-radius: 50%;
-        // opacity: 55%;
 
-        img{
+        img {
             border-radius: 50%;
             width: 100%;
             height: 100%;
@@ -56,27 +55,87 @@
 }
 
 .login-modal-container {
-    margin-top: 15px;
-    margin-left: 15px;
     background-color: $clr10;
-    height: 31.78em;
-    width: 31.56em;
     border-radius: 2%;
     box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px 0px;
 
     .credentials-page {
-        height: 100%;
+        padding: 15px;
+        position: relative;
 
-        .login {
-            height: 100%;
-            width: 100%;
+        .credentials-header {
             display: flex;
             align-items: center;
-            justify-content: center;
+            width: 100%;
+            position: relative;
+            
+            h3 {
+                font-family: cereal-book;
+                font-size: 0.8888em;
+                margin: 0 auto;
+                position: relative;
+                right: 20px;
+            }
 
-            // .login-form {}
+            .close-login-modal {
+                font-size: 1em;
+                font-family: cereal-Medium;
+                background-color: transparent;
+            }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -7px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $clr12;
+                }
+            
+        }
+
+        .login {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+
+
+            .login-form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .user-details {
+                    margin: 0;
+                    display: flex;
+
+                    input {
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            .login-signup-btn,
+            .signup-btn {
+                height: fit-content;
+                padding: 7px 10px;
+                font-size: 0.77778em;
+                font-family: cereal-Medium;
+                border-radius: 8px;
+                background-color: rgb(246, 246, 246);
+                transition: 0.2s;
+                &:hover{
+                    background-color: rgb(245, 241, 241);
+                    transition: 0.2s;
+
+                }
+            }
+
+            .demo-login-btn {
+                width: auto;
+            }
         }
     }
-
-
 }

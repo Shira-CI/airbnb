@@ -25,7 +25,8 @@ export function ReserveButton({ children, ...props }) {
   }, [buttonRef])
 
   return (
-    <button ref={buttonRef} {...props} className={classes.btnSquareColor}>
+    // <button ref={buttonRef} {...props} className={classes.btnSquareColor}>
+    <button ref={buttonRef} {...props} className={`${classes.btnSquareColor} demo-login-btn`}>
       {children}
     </button>
   )
