@@ -1,22 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { filterService } from "../services/filter.service"
-import { set } from 'date-fns'
+// import { set } from 'date-fns'
+import { useLocation } from 'react-router-dom'
 
 
 export function LabelsCarousel() {
     const [isDragging, setIsDragging] = useState(false)
     const [activeCategory, setActiveCategory] = useState('')
     const navigate = useNavigate()
-
+    const location = useLocation()
+    const searchParams = new URLSearchParams(location.search)
+    const categoryType = searchParams.get('type')
     const categories = filterService.getCategories()
     const carouselRef = useRef(null)
     const arrowLeftRef = useRef(null)
     const arrowRightRef = useRef(null)
     const categoryRef = useRef(null)
     const savedIsDragging = useRef(false)
-
     let carouselElement, startX, startScrollLeft, movingWidth
+
+    // console.log(categoryType , 'categoryType')
+    
 
     useEffect(() => {
         savedIsDragging.current = isDragging
@@ -57,8 +62,6 @@ export function LabelsCarousel() {
         }
     }, [])
 
-
-
     useEffect(() => {
         if (!carouselElement) return
         carouselElement.addEventListener('mousedown', dragStart)
@@ -88,9 +91,8 @@ export function LabelsCarousel() {
         setIsDragging(false)
         carouselElement.classList.remove('dragging')
     }
-    function onCategoryClick(category) {
-        setActiveCategory(category.name)
-        navigate(`/?type=${category.name}`)
+    function onCategoryClick( category) {
+          navigate(`/?type=${category.name}`)
     }
 
 
@@ -100,8 +102,9 @@ export function LabelsCarousel() {
             <i className="material-symbols-outlined arrow-left" ref={arrowLeftRef} id="left">arrow_back_ios</i>
             <ul className="labelsCarousel" ref={carouselRef}>
                 {categories.map((category, idx) => {
+                    return (<li className={`category ${category.name === categoryType ? 'active' : ''}`}
+                        key={idx} ref={categoryRef} onClick={() => onCategoryClick(category)}>
 
-                    return (<li className={`category ${activeCategory === category.name ? 'active' : ''}`} key={idx} ref={categoryRef} onClick={() => onCategoryClick(category)}>
                         <div className="category-img">
                             <img src={require(`../assets/img/categories/${category.url}.png`)}
                                 alt={category.url}
