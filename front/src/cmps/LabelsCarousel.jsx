@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router'
 import { filterService } from "../services/filter.service"
+import { set } from 'date-fns'
 
 
 export function LabelsCarousel() {
     const [isDragging, setIsDragging] = useState(false)
+    const [activeCategory, setActiveCategory] = useState('')
+    const navigate = useNavigate()
+
     const categories = filterService.getCategories()
     const carouselRef = useRef(null)
     const arrowLeftRef = useRef(null)
@@ -83,6 +88,11 @@ export function LabelsCarousel() {
         setIsDragging(false)
         carouselElement.classList.remove('dragging')
     }
+    function onCategoryClick(category) {
+        setActiveCategory(category.name)
+        navigate(`/?type=${category.name}`)
+    }
+
 
     if (!categories) return
     return (
@@ -91,7 +101,7 @@ export function LabelsCarousel() {
             <ul className="labelsCarousel" ref={carouselRef}>
                 {categories.map((category, idx) => {
 
-                    return (<li className="category" key={idx} ref={categoryRef}>
+                    return (<li className={`category ${activeCategory === category.name ? 'active' : ''}`} key={idx} ref={categoryRef} onClick={() => onCategoryClick(category)}>
                         <div className="category-img">
                             <img src={require(`../assets/img/categories/${category.url}.png`)}
                                 alt={category.url}

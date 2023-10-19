@@ -15,13 +15,15 @@ function _buildCriteria(filterBy) {
       { 'loc.country': { $regex: filterBy.location, $options: 'i' } }
     ],
     capacity: { $gte: filterBy.guests },
-    type: { $regex: filterBy.type, $options: 'i' }
+    // type: { $regex: filterBy.type, $options: 'i' }
+    type: filterBy.type 
   }
   return criteria
 }
 async function query(filterBy) {
   try {
     const criteria = _buildCriteria(filterBy)
+    // console.log(criteria)
     // const collection = await dbService.getCollection('stay_new')
     const collection = await dbService.getCollection('stay')
     var stayCursor = await collection.find(criteria)

@@ -57,7 +57,7 @@ function getPopularCategories() {
       url: 'cabins',
     },
     {
-      name: 'Countryside',
+      name: 'Country side',
       url: 'countryside',
     },
     {
@@ -172,7 +172,7 @@ function getCategories() {
       url: 'trending',
     },
     {
-      name: 'Bed & breakfasts',
+      name: 'Breakfasts',
       url: 'bed-and-breakfast',
     },
     {
