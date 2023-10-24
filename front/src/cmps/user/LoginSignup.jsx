@@ -3,6 +3,8 @@ import { userService } from '../../services/user.service.js'
 import { CredentialsForm } from './credentials-form.jsx'
 import { useState } from 'react'
 import { login, signup } from '../../store/user.action.js'
+import { ReserveButton } from '../orders/ReserveButton.jsx'
+
 
 // const { useState } = React
 
@@ -14,6 +16,12 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
     fullname: '',
   })
 
+  const demoCredentials = {
+    username: 'ilan',
+    password: 'ilan',
+    fullname: 'ilan',
+  }
+
 
   function clearState() {
     setCredentials({ username: '', password: '', fullname: '', imgUrl: '' })
@@ -24,8 +32,8 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
   }
 
   async function onLogin(credentials) {
-    console.log('onLogin')
-    // if (ev) ev.preventDefault()
+    // console.log('onLogin')
+    console.log(credentials)
     if (!credentials.username) return
     try {
       const user = await login(credentials)
@@ -53,7 +61,7 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
   return (
     <div className="credentials-page">
       <section className="credentials-header">
-        <button onClick={onCloseModal} className="close-login-modal"><i class="fa-solid fa-x fa-xs"></i></button>
+        <button onClick={onCloseModal} className="close-login-modal"><i className="fa-solid fa-x fa-xs"></i></button>
         <h3>Log in or sign up </h3>
       </section>
       <CredentialsForm
@@ -61,6 +69,8 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
         onCloseModal={onCloseModal}
 
       />
+      <ReserveButton children={'DEMO login'} className="demo-login-btn" onClick={()=> {onLogin(demoCredentials)}}/>
+
 
     </div >
   )

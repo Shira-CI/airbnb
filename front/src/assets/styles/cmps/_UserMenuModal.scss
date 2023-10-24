@@ -14,64 +14,43 @@
     width: 200px;
 
     .menu-links {
-        // font-family: circular-Book;
         display: flex;
         flex-direction: column;
         font-size: 0.888em;
         width: 100%;
 
         .login-btn,
-        .signup-btn {
-            font-size: 0.9em;
-           font-family: cereal-Book;
-           padding:  8px 20px;
-           &:hover{
-            background-color: #f5f5f5ee;
-           }
+        .signup-btn,
+        .trips-link,
+        .rents-link,
+        .logout {
+            font-size: 1em;
+            font-family: cereal-Book;
+            padding: 8px 20px;
+
+            &:hover {
+                background-color: #f5f5f5ee;
+            }
         }
-        
-        .login-btn {
-            font-family: cereal-Medium;
-        }
-
-
-        .trips-link {
-            box-sizing: border-box;
-            margin-top: 2px;
-            width: 100%;
-            padding-left: 17px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-        }
-
-        .rent-link {
-            padding-left: 17px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-        }
-
-        .trips-link:hover,
-        .rent-link:hover {
-            background-color: $clr13;
-
-        }
-
 
         .logout {
+            margin: 0;
+            margin-top: 8px;
             width: 100%;
-            border-top: 1px solid $clr12;
-            // padding-top: 12px;
-            // padding-bottom: 9px;
-            padding-left: 17px;
-            margin-left: 0;
-            font-family: circular-Black;
-            font-size: 14px;
-            background-color: rgba(255, 255, 255, 0);
+            background-color: transparent;
             text-align: start;
-            height: 40px;
-        }
+            position: relative;
+            font-size: 0.9em;
 
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $clr12;
+                left: 0;
+                top: -4px;
+            }
+        }
     }
 }

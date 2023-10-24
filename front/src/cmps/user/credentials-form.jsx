@@ -2,7 +2,7 @@ import { userService } from "../../services/user.service.js"
 
 import { useEffect, useState } from 'react'
 import { signup } from "../../store/user.action.js"
-import {ReserveButton} from '../orders/ReserveButton.jsx'
+// import {ReserveButton} from '../orders/ReserveButton.jsx'
 
 export function CredentialsForm({ onSubmit, onCloseModal  }) {
     const [isSignUp , setIsSignUp]= useState(false)
@@ -52,7 +52,7 @@ export function CredentialsForm({ onSubmit, onCloseModal  }) {
         {!isSignUp &&
             <button onClick={()=> setIsSignUp(true)} className="signup-btn">Sign up</button>
         }
-        <ReserveButton children={'DEMO login'} className="demo-login-btn"/>
+        {/* <ReserveButton children={'DEMO login'} className="demo-login-btn"/> */}
 
         </section>
     )

@@ -64,7 +64,7 @@ export function MyRents() {
             {(!orders || !orders.length) && <h2>Get help with getting Orders!</h2>}
 
             <section className='orders container'>
-                <h2 className="orders-header">Statistics</h2>
+                <h2 className="orders-header">Host statistics</h2>
                 <div className="rent-headers">
                     <h2 className="table-header">Half-Yearly Revenue</h2>
                     <h2 className="table-header">Weekly Income</h2>
