@@ -5,9 +5,6 @@ import { useState } from 'react'
 import { login, signup } from '../../store/user.action.js'
 import { ReserveButton } from '../orders/ReserveButton.jsx'
 
-
-// const { useState } = React
-
 export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
 
   const [credentials, setCredentials] = useState({
@@ -32,8 +29,6 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
   }
 
   async function onLogin(credentials) {
-    // console.log('onLogin')
-    console.log(credentials)
     if (!credentials.username) return
     try {
       const user = await login(credentials)
@@ -47,16 +42,13 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
   }
 
   function onSignup(credentials) {
-    // if (ev) ev.preventDefault()
     if (!credentials.username || !credentials.password || !credentials.fullname)
       return
-    //   if (!credentials.imgUrl) {credentials.imgUrl='https://robohash.org/mat.png?size=50x50&set=set1'}
     signup(credentials)
     clearState()
     onCloseModal()
     console.log('signup')
   }
-
 
   return (
     <div className="credentials-page">
@@ -67,11 +59,8 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
       <CredentialsForm
         onSubmit={onSubmit}
         onCloseModal={onCloseModal}
-
       />
       <ReserveButton children={'DEMO login'} className="demo-login-btn" onClick={()=> {onLogin(demoCredentials)}}/>
-
-
     </div >
   )
 }

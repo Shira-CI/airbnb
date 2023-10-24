@@ -6,15 +6,14 @@ import { UserMenuOpen } from "./UserMenuOpen"
 import { LoginModal } from "./LoginModal"
 import { logout } from "../../store/user.action"
 import { showErrorMsg, showSuccessMsg } from "../../services/event-bus.service"
-
+import {setLoginModal} from '../../store/user.action'
 
 export function UserMenu() {
     const user = useSelector((storeState) => storeState.userModule.user)
+    const isLoginModalOpen = useSelector((storeState) => storeState.userModule.isLoginModalOpen)
     const navigate = useNavigate()
-    // console.log(user)
 
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
-    const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     useEffect(() => {
@@ -42,12 +41,16 @@ export function UserMenu() {
         event.preventDefault()
         if (modal === 'login-modal') {
             // setIsSignup(boolean)
-            setIsLoginModalOpen(true)
+            // setIsLoginModalOpen(true)
+            setLoginModal(true)
+
         }
     }
 
     const onCloseModal = () => {
-        setIsLoginModalOpen(false)
+        // setIsLoginModalOpen(false)
+        setLoginModal(false)
+
     }
 
     function toggleUserMenu() {

@@ -5,13 +5,15 @@ export const SET_WATCHED_USER = 'SET_WATCHED_USER'
 export const REMOVE_USER = 'REMOVE_USER'
 export const SET_USERS = 'SET_USERS'
 export const SET_DB_USER = 'SET_DB_USER'
+export const SET_LOGIN_MODAL = 'SET_LOGIN_MODAL'
 
 const initialState = {
     user: userService.getLoggedinUser(),
     userFromDb: null,
     users: [],
     watchedUser: null,
-    notifications: []
+    notifications: [],
+    isLoginModalOpen: false
 }
 
 export function userReducer(state = initialState, action) {
@@ -33,6 +35,9 @@ export function userReducer(state = initialState, action) {
 
         case SET_USERS:
             return { ...state, users: action.users }
+
+        case SET_LOGIN_MODAL:
+            return { ...state, isLoginModalOpen: action.boolean }
 
         default:
             return state

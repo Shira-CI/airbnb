@@ -1,4 +1,4 @@
-import { SET_USER, SET_WATCHED_USER, REMOVE_USER, SET_USERS } from './user.reducer.js'
+import { SET_USER, SET_WATCHED_USER, REMOVE_USER, SET_USERS, SET_LOGIN_MODAL } from './user.reducer.js'
 import { userService } from '../services/user.service.js'
 import { store } from './store.js'
 import { showErrorMsg } from '../services/event-bus.service'
@@ -15,7 +15,6 @@ export async function removeUser(userId) {
 export async function login(credentials) {
   try {
     const user = await userService.login(credentials)
-    console.log(user)
     store.dispatch({ type: SET_USER, user })
     return user
   } catch (err) {
@@ -66,4 +65,8 @@ export async function loadUser(userId) {
     showErrorMsg('Cannot load user')
     console.log('Cannot load user', err)
   }
+}
+
+export function setLoginModal(boolean){
+  store.dispatch({ type: SET_LOGIN_MODAL, boolean })
 }

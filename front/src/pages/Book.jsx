@@ -10,12 +10,11 @@ import { useSelector } from 'react-redux'
 import { stayService } from "../services/stay.service"
 import { orderService } from '../services/order.service'
 import { utilService } from '../services/util.service'
-import { LoginSignup } from '../cmps/user/LoginSignup'
 import { userService } from '../services/user.service'
 import { setFooterToDisplay } from '../store/stay.actions.js'
 import { Payments } from '../cmps/orders/Payments'
 import { ReserveButton } from '../cmps/orders/ReserveButton'
-
+import {setLoginModal} from '../store/user.action'
 
 export const Book = () => {
   const [stay, setStay] = useState(null)
@@ -27,11 +26,9 @@ export const Book = () => {
   const [localUser, setLocalUser] = useState(null)
   const [orderToSave, setOrderToSave] = useState(null)
   const [isPayments, setIsPayments] = useState(null)
-  // console.log(isPayments)
   const location = useLocation()
   const navigate = useNavigate()
   const user = useSelector((state) => state.userModule.user)
-
   const searchParams = new URLSearchParams(location.search)
   const { checkIn, checkOut, guests, stayName } = Object.fromEntries(searchParams.entries())
   const cleaningFee = 6
@@ -217,7 +214,7 @@ export const Book = () => {
             <div className='good-price-content'>  Your dates are $35 less than the avg. nightly rate over the last 3 months.</div>
             <span className='price-tag-icon'><img src={priceTag} alt="" /></span>
           </section>
-          
+
           <section className="book-details-wrapper">
             <div className="book-details">
               <div className='your-trip-header'>Your trip</div>
@@ -257,18 +254,18 @@ export const Book = () => {
 
               {!isBooked && (
                 <section>
-              <hr className="custom-hr" />
-               
-             
-              <Payments order={order} setIsPayments={setIsPayments} getPaymentsValue={getPaymentsValue} getSecondPaymenDate={getSecondPaymenDate} />
-{/* 
+                  <hr className="custom-hr" />
+
+
+                  <Payments order={order} setIsPayments={setIsPayments} getPaymentsValue={getPaymentsValue} getSecondPaymenDate={getSecondPaymenDate} />
+                  {/* 
               <div className='pay-with-container'>
                 <div className='pay-with-header'>
                   Pay with
                 </div>
               </div> */}
-              </section>
-               )}
+                </section>
+              )}
               <div className='cancelation-policy'>
                 <div className='cancelation-header'>
                   Cancellation policy
@@ -281,7 +278,7 @@ export const Book = () => {
                 </span>
 
               </div>
-             
+
 
               <div className='rules-container'>
                 <div className='rules-header'>
@@ -300,9 +297,9 @@ export const Book = () => {
               {user ? (
                 !isBooked &&
                 <section>
-                  <div className='terms'> By selecting the button below, I agree to the 
-                  Host's House Rules, Ground rules for guests, Airbnb's Rebooking and 
-                  Refund Policy, Pay Less Upfront Terms, and that Airbnb can charge my payment method if I’m responsible for damage.
+                  <div className='terms'> By selecting the button below, I agree to the
+                    Host's House Rules, Ground rules for guests, Airbnb's Rebooking and
+                    Refund Policy, Pay Less Upfront Terms, and that Airbnb can charge my payment method if I’m responsible for damage.
                   </div>
                   <section className='confirm-btn'>
                     <ReserveButton children={'Confirm and pay'} onClick={onConfirmBtn} />
@@ -310,7 +307,9 @@ export const Book = () => {
                 </section>
 
               ) : (
-                <LoginSignup />
+                <section className='login-msg-book-page'>
+                  <ReserveButton children={'Login for reservation'} className="login-msg-book-page-btn" onClick={()=>{setLoginModal(true)}} />
+                </section>
               )
               }
 
@@ -320,13 +319,13 @@ export const Book = () => {
         </main>
 
         <div className="book-summary-details">
-              
+
           <div className="order-details">
 
             <div className="order-details-header">
 
               <img className='stay-img' src={imgUrls[1]} alt="" />
-            
+
               <div className="book-stay-basic-wrapper">
                 <div className="order-details-header-text">
                   <div className="book-stay-basic">
@@ -339,7 +338,6 @@ export const Book = () => {
                 </div>
               </div>
             </div>
-            {/* <hr className="custom-hr" /> */}
             <div className="order-details-price-summary">
               <div className='price-details-header'>Price details</div>
               <div className="per-night-price-wrapper">
