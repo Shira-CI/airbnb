@@ -200,15 +200,16 @@ export function StayDetailsOrder({ stay, setOpenTab, openTab }) {
                     </section>
                     {/*///// GUESTS//////*/}
 
-                    <section className='guests' onClick={() => (openTab === 'guests' ? setOpenTab(null) : setOpenTab('guests'))}>
-                        <section className='guests-close'>
+                    <section className='guests'>
+                        <section className='guests-close'  onClick={() => (openTab === 'guests' ? setOpenTab(null) : setOpenTab('guests'))}>
                             <span className='order-heading'>GUESTS</span>
                             <span className='guests-count guests-btn'>
                                 <span className='guests-count'  >
                                     {getGuestsCount()}
-                                    <span className='guests-count-word'> {guestsCountWords} </span>
+                                    <span className='guests-count-span'> {guestsCountWords} </span>
                                 </span>
                             </span>
+                            </section>
                             {openTab === 'guests' && (
                                 <section className="guests-open">
                                     <GuestOrderSelect
@@ -218,7 +219,7 @@ export function StayDetailsOrder({ stay, setOpenTab, openTab }) {
                                     />
                                 </section>
                             )}
-                        </section>
+                     
                     </section>
                 </section>
 

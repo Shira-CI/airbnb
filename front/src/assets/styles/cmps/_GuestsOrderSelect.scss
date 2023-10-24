@@ -1,71 +1,125 @@
-.guests-open{
+.guests-open {
     position: absolute;
+    z-index: 5;
     background-color: $clr11;
-    top: 85%;
-    
-    width: fit-content;
-    height: 450px;
-    border-radius: 30px;
+    top: 100%;
+    left: -1px;
     border: 1px solid $clr12;
-    transform: translateY(15%);
-    visibility: visible;
-    cursor: auto;
-    padding: 0;
-    width: 380px;
-    padding: 5px;
-
+    padding: 16px;
+    padding-top: 2px;
+    margin-top: 4px;
+    border-radius: 4px;
+    width: calc(100% + 2px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px, rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
 
     .guest-select-options {
         width: 80%;
-        height: 100%;
-        margin: auto;
         display: flex;
         flex-direction: column;
+        width: 100%;
 
-        
+        .guest-select-label-header {
+            font-size: 1em;
+            font-family: cereal-Medium;
+            padding-bottom: 4px;
+        }
+
+        .guest-select-label-sub-header {
+            font-family: cereal-regular;
+            font-size: 0.888em;
+
+            &:last-child {
+                a {
+                    text-decoration: underline;
+                    font-family: cereal-Medium;
+                }
+            }
+        }
+
         .guest-select-row {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-top: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid;
-            flex:1;
-            
+            padding: 0;
+            padding-top: 22px;
+            flex: 1;
+
             &:last-child {
                 border-bottom: none;
             }
         }
-    }
 
-    .guest-select-title {
-        font-size: rem(16px);
-        line-height: 20px;
-        // font-family: cereal;
-        padding-bottom: em(6px);
-    }
+        .counter-container-order {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 102px;
+            height: 32px;
+            color: #515151;
 
-    .guest-select-sub-title {
-        font-size: rem(14px);
-        line-height: 18px;
-        // font-family: cereal;
-    }
+            .counter-value {
+                margin: 0;
+                height: fit-content;
+            }
 
-    .guest-select-counter {
-        width: 104px;
-        height: 32px;
-    }
+            button {
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+                border: 1px solid #b0b0b0;
+                color: $clr13;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                border-radius: 50%;
 
-    .counter-btn {
-        border-radius: 50%;
-        height: 35px;
-        width: 35px;
-        background-color: $clr11;
-        border: 1px solid $clr14 ;
+                &:disabled {
+                    cursor: not-allowed;
+                    color: $clr13;
+                    border-color: $clr13 ;
+                }
 
-        &:disabled {
-            cursor: not-allowed;
+                &:hover{
+                    border: 1px solid black;
+                }
+            }
 
+            .plus {
+                background-image: url("../../img/icons/plusSign.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 50%;
+                opacity: 0.8;
+            }
+
+            .minus {
+                background-image: url("../../img/icons/minusSign.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 40%;
+                opacity: 0.8;
+            }
+        }
+
+        .close-guests-select{
+            width: fit-content;
+            background-color: transparent;
+            align-self: flex-end;
+            margin: 0;
+            margin-top: 25px;
+            padding: 10px;
+            position: relative;
+            left: 10px;
+            text-decoration: underline;
+            font-size: 1em;
+            font-family: cereal-Medium;
+            border-radius: 8px;
+            &:hover{
+                background-color: $clr20;
+            }
         }
     }
 }

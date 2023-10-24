@@ -1,4 +1,4 @@
-import { Counter } from './GuestsOrderCounter'
+import { GuestOrderCounter } from './GuestsOrderCounter'
 
 export function GuestOrderSelect({ onSetField, guests, setOpenTab }) {
 
@@ -50,7 +50,7 @@ export function GuestOrderSelect({ onSetField, guests, setOpenTab }) {
                         <div className="guest-select-label-header">{opt.label}</div>
                         <div className="guest-select-label-sub-header">{opt.subLabel}</div>
                     </div>
-                        <Counter field={opt.field} value={guests[opt.field]} onChange={handleChange} />
+                        <GuestOrderCounter field={opt.field} value={guests[opt.field]} onChange={handleChange} />
                 </div>
             )
         })}

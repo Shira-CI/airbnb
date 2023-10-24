@@ -1,5 +1,5 @@
-.order-modal-msg{
-   position: sticky;
+.order-modal-msg {
+  position: sticky;
   top: 130px;
   margin-bottom: 94px;
 }
@@ -16,10 +16,6 @@
   font-family: cereal-regular;
   line-height: 20px;
   position: relative;
-  // margin-bottom: 22px;
-  // position: sticky;
-  // top: 0;
-  // bottom: 94px;
 
   .good-price-header {
     display: block;
@@ -34,7 +30,6 @@
   .price-tag-icon {
     position: absolute;
     top: 20px;
-    // right: 7.5%;
     right: 10px;
 
     img {
@@ -44,15 +39,8 @@
   }
 }
 
-
-
-
 .stay-details-order-container {
   .order-modal {
-    // position: sticky;
-    // top: 130px;
-    // margin-bottom: 48px;
-    // height: fit-content;
     border: 1px solid $clr9;
     border-radius: 12px;
     padding: 24px;
@@ -75,33 +63,18 @@
         display: flex;
         align-items: center;
 
-        > * {
-          // padding-block-start: 6px;
-          // align-items: end;
-          // justify-self: end;
-        }
-
-        // span {
-        //     // padding-block-start: 9px;
-        // }
-
         .stay-rate-reviews {
           font-size: 0.7778em;
           color: $clr15;
           font-family: $font1;
           padding-inline-start: 2px;
-          // justify-self: end;
-
-          // padding-block-start: 6px;
         }
 
         .stay-preview-star {
           margin-bottom: 2.5px;
           margin-right: 2px;
-          // translate: -10% -5.5%;
 
           .stay-preview-avg {
-            // padding-inline-start: 4px;
             font-size: 0.7778em;
             font-weight: 500;
             font-family: $font1;
@@ -111,8 +84,6 @@
             width: 12px;
             height: 12px;
             position: relative;
-            // top: 3px;
-            // right: 4px;
           }
         }
       }
@@ -129,14 +100,12 @@
           font-size: 22px;
           font-family: inherit;
           align-self: center;
-          // justify-self: center;
         }
 
         .word-night {
           font-size: 16px;
           font-weight: 400;
           padding-inline-start: 5px;
-          // padding-left: 4px;
         }
       }
     }
@@ -154,7 +123,6 @@
     }
 
     .check-availability {
-      // height: rem(48px);
       height: 48px;
       font-size: 16px;
       font-family: $font1;
@@ -169,7 +137,6 @@
 
       .nigths-price-calc {
         text-decoration: underline;
-        // margin-bottom: 4px;
       }
 
       .fees {
@@ -204,14 +171,12 @@
     }
 
     .user-prefs {
-      // background-color: lightcoral;
       height: 227px;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      // height: 227px;
       position: relative;
 
       .guests {
@@ -225,6 +190,7 @@
           display: flex;
           flex-direction: column;
           padding-inline-start: 12px;
+          // position: relative;
 
           .order-heading {
             padding-block-start: 11px;
@@ -237,7 +203,6 @@
             bottom: 2px;
             width: 100%;
             height: 100%;
-            // background-color: palegoldenrod;
             font-size: 0.94em;
 
             span {
@@ -245,39 +210,12 @@
               margin: 0;
               padding: 0;
               background-color: #22222200;
-              // font-size: 1em;
               font-family: circular-regular;
               line-height: 0;
               width: 100%;
-              // height: 100%;
+
               span {
                 width: 100%;
-              }
-            }
-          }
-
-          .guests-open {
-            // height: 408px;
-            position: absolute;
-            // top: -5px;
-            // right: -0.5px;
-            top: -4px;
-            left: -1px;
-            width: 100.5%;
-            height: 408px;
-            padding: 0;
-            padding: 16px;
-            // width: 320px;
-            border-radius: 4px;
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
-
-            .guest-select-row {
-              padding: 0;
-              font-size: 16px;
-              font-family: $font1;
-
-              .counter-value {
-                margin: 5px;
               }
             }
           }
@@ -302,7 +240,6 @@
 
       .picker-btns {
         width: 100%;
-        // height: 100%;
         display: flex;
         top: 5px;
 
@@ -315,7 +252,6 @@
           margin: 0;
           border-bottom: 1px solid rgb(176, 176, 176);
           padding: 10px 12px 12px 12px;
-          // padding-block-start: 26px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -388,7 +324,7 @@
         margin: 10px 33px 10px 0;
         position: relative;
         top: -10px;
-    }
+      }
 
       .date-picker-header {
         margin-inline-start: 32px;
@@ -407,9 +343,7 @@
           font-family: $font1;
           font-weight: 300;
           font-size: 0.875em;
-
           margin-top: 0;
-          // margin-bottom: 40px;
         }
       }
 
@@ -418,361 +352,323 @@
         flex-direction: column;
 
         .order-modal-header {
+          display: flex;
+          margin-bottom: 22px;
+          align-content: end;
+          justify-content: space-between;
+          height: 27px;
+
+          .stay-rate {
             display: flex;
-            margin-bottom: 22px;
-            align-content: end;
-            justify-content: space-between;
-            height: 27px;
+            align-items: center;
 
-            .stay-rate {
-                display: flex;
-                align-items: center;
-
-                .stay-rate-reviews {
-                    font-size: 0.7778em;
-                    color: $clr15;
-                    font-family: $font1;
-                    padding-inline-start: 2px;
-                }
-
-                .stay-preview-star {
-                    margin-bottom: 2.5px;
-                    margin-right: 2px;
-                    // translate: -10% -5.5%;
-
-                    .stay-preview-avg {
-                        // padding-inline-start: 4px;
-                        font-size: 0.7778em;
-                        font-weight: 500;
-                        font-family: $font1;
-                    }
-
-
-                    img {
-                        width: 12px;
-                        height: 12px;
-                        position: relative;
-                        // top: 3px;
-                        // right: 4px;
-                    }
-                }
-
+            .stay-rate-reviews {
+              font-size: 0.7778em;
+              color: $clr15;
+              font-family: $font1;
+              padding-inline-start: 2px;
             }
 
+            .stay-preview-star {
+              margin-bottom: 2.5px;
+              margin-right: 2px;
 
-            .price-per-night {
-                width: 25%;
-                display: flex;
-                justify-content: space-between;
-                align-items: end;
+              .stay-preview-avg {
+                font-size: 0.7778em;
+                font-weight: 500;
                 font-family: $font1;
+              }
 
-                .price {
-                    font-weight: 800;
-                    font-size: 22px;
-                    font-family: inherit;
-                    align-self: center;
-                    // justify-self: center;
-                }
-
-                .word-night {
-                    font-size: 16px;
-                    font-weight: 400;
-                    padding-inline-start: 5px;
-                    // padding-left: 4px;
-                }
-
+              img {
+                width: 12px;
+                height: 12px;
+                position: relative;
+              }
             }
+
+          }
+
+
+          .price-per-night {
+            width: 25%;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            font-family: $font1;
+
+            .price {
+              font-weight: 800;
+              font-size: 22px;
+              font-family: inherit;
+              align-self: center;
+            }
+
+            .word-night {
+              font-size: 16px;
+              font-weight: 400;
+              padding-inline-start: 5px;
+            }
+
+          }
         }
 
         .no-charge-msg {
-            text-align: center;
-            font-size: 14px;
-            font-family: cereal-regular;
-            margin-top: 17px;
-            line-height: 18px;
-            font-weight: 400px;
-            text-size-adjust: 100%;
-            line-break: strict;
-            color: $clr8;
+          text-align: center;
+          font-size: 14px;
+          font-family: cereal-regular;
+          margin-top: 17px;
+          line-height: 18px;
+          font-weight: 400px;
+          text-size-adjust: 100%;
+          line-break: strict;
+          color: $clr8;
         }
-
-
 
         .check-availability {
-            // height: rem(48px);
-            height: 48px;
-            font-size: 16px;
-            font-family: $font1;
+          height: 48px;
+          font-size: 16px;
+          font-family: $font1;
         }
 
-
-
         .price-summary {
-            margin-top: 20px;
+          margin-top: 20px;
+          font-size: 1rem;
+          font-family: cereal-regular;
+          font-weight: 400;
+          margin-bottom: 0;
+
+          .nigths-price-calc {
+            text-decoration: underline;
+          }
+
+          .fees {
+            padding-top: 10px;
+            margin-bottom: 1px;
+            text-decoration: underline;
+          }
+
+          .total-price {
+            margin-top: 21px;
+            padding-top: 21px;
+            border-top: 1px solid rgb(221, 221, 221);
             font-size: 1rem;
-            font-family: cereal-regular;
-            font-weight: 400;
-            margin-bottom: 0;
+            font-weight: 600;
+            color: $clr18;
+            font-family: cereal-bold;
+          }
 
-            .nigths-price-calc {
-                text-decoration: underline;
-                // margin-bottom: 4px;
-
-            }
-
-            .fees {
-                padding-top: 10px;
-                margin-bottom: 1px;
-                text-decoration: underline;
-            }
-
-            .total-price {
-                margin-top: 21px;
-                padding-top: 21px;
-                border-top: 1px solid rgb(221, 221, 221);
-                font-size: 1rem;
-                font-weight: 600;
-                color: $clr18;
-                font-family: cereal-bold;
-            }
-
-            .total-price,
-            .nigths-price-calc,
-            .fees {
-                display: flex;
-                justify-content: space-between;
-            }
+          .total-price,
+          .nigths-price-calc,
+          .fees {
+            display: flex;
+            justify-content: space-between;
+          }
 
         }
 
         .reservation-details {
-            display: flex;
-            flex-direction: column;
-            font-family: $font1;
-            font-size: 16px;
+          display: flex;
+          flex-direction: column;
+          font-family: $font1;
+          font-size: 16px;
 
 
         }
 
         .user-prefs {
-            // background-color: lightcoral;
-            height: 227px;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            // height: 227px;
+          height: 227px;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+
+          .guests {
+            width: 320px;
             position: relative;
+            top: -4px;
+            cursor: pointer;
 
+            .guests-close {
+              height: 56px;
+              display: flex;
+              flex-direction: column;
+              padding-inline-start: 12px;
 
+              .order-heading {
+                padding-block-start: 11px;
+                margin: 0;
+              }
 
-            .guests {
-                width: 320px;
+              .guests-count {
+                padding: 0;
                 position: relative;
-                top: -4px;
-                cursor: pointer;
+                bottom: 2px;
+                width: 100%;
+                height: 100%;
+                font-size: 0.94em;
 
-                .guests-close {
-                    height: 56px;
-                    display: flex;
-                    flex-direction: column;
-                    padding-inline-start: 12px;
+                span {
+                  color: $clr8;
+                  margin: 0;
+                  padding: 0;
+                  background-color: #22222200;
+                  font-family: circular-regular;
+                  line-height: 0;
+                  width: 100%;
 
-                    .order-heading {
-                        padding-block-start: 11px;
-                        margin: 0;
-                    }
-
-                    .guests-count {
-                        padding: 0;
-                        position: relative;
-                        bottom: 2px;
-                        width: 100%;
-                        height: 100%;
-                        // background-color: palegoldenrod;
-                        font-size: 0.94em;
-
-                        span {
-                            color: $clr8;
-                            margin: 0;
-                            padding: 0;
-                            background-color: #22222200;
-                            // font-size: 1em;
-                            font-family: circular-regular;
-                            line-height: 0;
-                            width: 100%;
-                            // height: 100%;
-                            span{
-                                width: 100%;
-                            }
-                        }
-                    }
-
-
-                    .guests-open {
-                        // height: 408px;
-                        position: absolute;
-                        // top: -5px;
-                        // right: -0.5px;
-                        top: -4px;
-                        left: -1px;
-                        width:100.5%;
-                        height: 408px;
-                        padding: 0;
-                        padding:16px;
-                        // width: 320px;
-                        border-radius: 4px;
-                        box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
-
-                        .guest-select-row {
-                            padding: 0;
-                            font-size: 16px;
-                            font-family: $font1;
-
-                            .counter-value {
-                                margin: 5px;
-                            }
-                        }
-                    }
+                  span {
+                    width: 100%;
+                  }
                 }
+              }
+
+              .guests-open {
+                position: absolute;
+                top: -4px;
+                left: -1px;
+                width: 100.5%;
+                height: 408px;
+                padding: 0;
+                padding: 16px;
+                border-radius: 4px;
+                box-shadow: rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+
+                .guest-select-row {
+                  padding: 0;
+                  font-size: 16px;
+                  font-family: $font1;
+
+                  .counter-value {
+                    margin: 5px;
+                  }
+                }
+              }
             }
-
-
+          }
         }
 
 
         .dates-guests-container {
-            height: 112.5px;
-            margin: 0;
-            padding: 0;
-            margin-bottom: 16px;
-            border: 1px solid $clr16;
-            width: 322px;
-            border-radius: 8px;
-            color: rgb(34, 34, 34) !important;
-            font-family: airbnb-cereal-book;
-            font-weight: 400 !important;
-            font-size: 16px !important;
-            line-height: 20px !important;
+          height: 112.5px;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 16px;
+          border: 1px solid $clr16;
+          width: 322px;
+          border-radius: 8px;
+          color: rgb(34, 34, 34) !important;
+          font-family: airbnb-cereal-book;
+          font-weight: 400 !important;
+          font-size: 16px !important;
+          line-height: 20px !important;
 
-            .picker-btns {
-                width: 100%;
-                // height: 100%;
-                display: flex;
-                top: 5px;
+          .picker-btns {
+            width: 100%;
+            display: flex;
+            top: 5px;
 
+            .check-in-btn,
+            .check-out-btn {
+              overflow: hidden;
+              width: 100%;
+              min-height: 56px;
+              background-color: rgba(0, 0, 0, 0);
+              margin: 0;
+              border-bottom: 1px solid rgb(176, 176, 176);
+              padding: 10px 12px 12px 12px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
 
+              span {
+                font-size: 14px;
+                font-family: cereal-regular;
+                font-weight: 400;
+                color: rgb(113, 113, 113);
 
-                .check-in-btn,
-                .check-out-btn {
-                    overflow: hidden;
-                    width: 100%;
-                    min-height: 56px;
-                    background-color: rgba(0, 0, 0, 0);
-                    margin: 0;
-                    border-bottom: 1px solid rgb(176, 176, 176);
-                    padding: 10px 12px 12px 12px;
-                    // padding-block-start: 26px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-
-                    span {
-                        font-size: 14px;
-                        font-family: cereal-regular;
-                        font-weight: 400;
-                        color: rgb(113, 113, 113);
-
-                    }
-                }
-
-                .check-out-btn {
-                    border-left: 1px solid rgb(176, 176, 176);
-                }
-
-
-
-                &.active {
-                    display: flex;
-                    position: absolute;
-                    background-color: white;
-                    transform: translateY(70%);
-                    z-index: 3;
-                    margin-top: 7px;
-                    background-color: $clr11;
-                    border: 2px solid #000;
-                    border-radius: 8px;
-                    z-index: 3;     
-                    width: 95.5%; 
-                    margin-left: 12px;
-
-                        }
+              }
             }
+
+            .check-out-btn {
+              border-left: 1px solid rgb(176, 176, 176);
+            }
+
+            &.active {
+              display: flex;
+              position: absolute;
+              background-color: white;
+              transform: translateY(70%);
+              z-index: 3;
+              margin-top: 7px;
+              background-color: $clr11;
+              border: 2px solid #000;
+              border-radius: 8px;
+              z-index: 3;
+              width: 95.5%;
+              margin-left: 12px;
+
+            }
+          }
         }
 
         .order-heading {
-            font-size: 10px;
-            font-family: cereal-regular;
-            font-weight: 800;
+          font-size: 10px;
+          font-family: cereal-regular;
+          font-weight: 800;
         }
 
         .date-picker-container {
-            font-family: airbnb-cereal-medium;
-            background-color: $clr11;
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
-            border-radius: 16px;
-            position: absolute;
-            height: rem(509px);
-            width: rem(661px);
-            top: 29px;
-            transform: translateX(-46.5%);
+          font-family: airbnb-cereal-medium;
+          background-color: $clr11;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+          border-radius: 16px;
+          position: absolute;
+          height: rem(509px);
+          width: rem(661px);
+          top: 29px;
+          transform: translateX(-46.5%);
 
-            .date-range-wrapper {
-                padding: 5px;
-                padding-top: 0;
+          .date-range-wrapper {
+            padding: 5px;
+            padding-top: 0;
+          }
+
+          .rdp-months {
+            padding-block-start: 10px;
+            display: flex;
+            justify-content: space-between;
+          }
+
+
+          .date-picker-header {
+            margin-inline-start: 32px;
+            margin-block-end: 35px;
+
+
+            h4 {
+              font-family: $font1;
+              margin-top: 25px;
+              margin-bottom: 12px;
+              padding: 0px;
+              font-size: 22px;
+              font-weight: 500;
             }
 
-            .rdp-months {
-                padding-block-start: 10px;
-                display: flex;
-                justify-content: space-between;
+            h5 {
+              font-family: $font1;
+              font-weight: 300;
+              font-size: 0.875em;
+
+              margin-top: 0;
             }
+          }
 
-
-            .date-picker-header {
-                margin-inline-start: 32px;
-                margin-block-end: 35px;
-
-
-                h4 {
-                    font-family: $font1;
-                    margin-top: 25px;
-                    margin-bottom: 12px;
-                    padding: 0px;
-                    font-size: 22px;
-                    font-weight: 500;
-                }
-
-                h5 {
-                    font-family: $font1;
-                    font-weight: 300;
-                    font-size: 0.875em;
-
-                    margin-top: 0;
-                    // margin-bottom: 40px;
-                }
-            }
-
-            .open-picker-btns {
-                display: flex;
-                flex-direction: column;
-
-           
-            }
-
-
+          .open-picker-btns {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
     }
