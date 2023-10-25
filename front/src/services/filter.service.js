@@ -36,10 +36,10 @@ function getPopularCategories() {
       name: 'Amazing views',
       url: 'amazing-view',
     },
-    {
-      name: "Chief's kitchens",
-      url: 'chiefs-kitchen',
-    },
+    // {
+    //   name: "Chief's kitchens",
+    //   url: 'chiefs-kitchen',
+    // },
     {
       name: 'Luxe',
       url: 'luxe',
@@ -175,30 +175,30 @@ function getCategories() {
       name: 'Breakfasts',
       url: 'bed-and-breakfast',
     },
-    {
-      name: "Chief's kitchens",
-      url: 'chiefs-kitchen',
-    },
-    {
-      name: 'Luxe',
-      url: 'luxe',
-    },
-    {
-      name: 'Mansions',
-      url: 'mansions',
-    },
-    {
-      name: 'Ski-in/out',
-      url: 'ski',
-    },
-    {
-      name: 'Private rooms',
-      url: 'private-rooms',
-    },
-    {
-      name: 'Boats',
-      url: 'boats',
-    },
+    // {
+    //   name: "Chief's kitchens",
+    //   url: 'chiefs-kitchen',
+    // },
+    // {
+    //   name: 'Luxe',
+    //   url: 'luxe',
+    // },
+    // {
+    //   name: 'Mansions',
+    //   url: 'mansions',
+    // },
+    // {
+    //   name: 'Ski-in/out',
+    //   url: 'ski',
+    // },
+    // {
+    //   name: 'Private rooms',
+    //   url: 'private-rooms',
+    // },
+    // {
+    //   name: 'Boats',
+    //   url: 'boats',
+    // },
     {
       name: 'Castles',
       url: 'castles',
@@ -215,22 +215,22 @@ function getCategories() {
       name: 'Design',
       url: 'design',
     },
-    {
-      name: 'Countryside',
-      url: 'countryside',
-    },
-    {
-      name: 'Farms',
-      url: 'farms',
-    },
+    // {
+    //   name: 'Countryside',
+    //   url: 'countryside',
+    // },
+    // {
+    //   name: 'Farms',
+    //   url: 'farms',
+    // },
     {
       name: 'Lakefront',
       url: 'lakefront',
     },
-    {
-      name: 'Tiny homes',
-      url: 'tiny-homes',
-    },
+    // {
+    //   name: 'Tiny homes',
+    //   url: 'tiny-homes',
+    // },
  
     {
       name: 'Beach',
@@ -240,72 +240,72 @@ function getCategories() {
       name: 'Beachfront',
       url: 'beach-front',
     },
-    {
-      name: 'Tropical',
-      url: 'tropical',
-    },
-    {
-      name: 'Lake',
-      url: 'lake',
-    },
-    {
-      name: 'Iconic cities',
-      url: 'iconic-cities',
-    },
+    // {
+    //   name: 'Tropical',
+    //   url: 'tropical',
+    // },
+    // {
+    //   name: 'Lake',
+    //   url: 'lake',
+    // },
+    // {
+    //   name: 'Iconic cities',
+    //   url: 'iconic-cities',
+    // },
 
-    {
-      name: 'Play',
-      url: 'play',
-    },
-    {
-      name: 'Creative spaces',
-      url: 'creative-spaces',
-    },
-    {
-      name: 'Desert',
-      url: 'desert',
-    },
-    {
-      name: 'Yurts',
-      url: 'yurts',
-    },
+    // {
+    //   name: 'Play',
+    //   url: 'play',
+    // },
+    // {
+    //   name: 'Creative spaces',
+    //   url: 'creative-spaces',
+    // },
+    // {
+    //   name: 'Desert',
+    //   url: 'desert',
+    // },
+    // {
+    //   name: 'Yurts',
+    //   url: 'yurts',
+    // },
     {
       name: 'Castles',
       url: 'castles',
     },
-    {
-      name: 'Arctic',
-      url: 'arctic',
-    },
+    // {
+    //   name: 'Arctic',
+    //   url: 'arctic',
+    // },
     {
       name: 'National parks',
       url: 'national-parks',
     },
-    {
-      name: 'New',
-      url: 'new',
-    },
-    {
-      name: 'Vineyards',
-      url: 'vineyards',
-    },
+    // {
+    //   name: 'New',
+    //   url: 'new',
+    // },
+    // {
+    //   name: 'Vineyards',
+    //   url: 'vineyards',
+    // },
 
     {
       name: 'Caves',
       url: 'caves',
     },
-    {
-      name: 'Earth homes',
-      url: 'earth-homes',
-    },
-    {
-      name: 'Treehouses',
-      url: 'tree-houses',
-    },
-    {
-      name: 'Houseboats',
-      url: 'house-boats',
-    },
+    // {
+    //   name: 'Earth homes',
+    //   url: 'earth-homes',
+    // },
+    // {
+    //   name: 'Treehouses',
+    //   url: 'tree-houses',
+    // },
+    // {
+    //   name: 'Houseboats',
+    //   url: 'house-boats',
+    // },
     {
       name: 'Camping',
       url: 'campings',
@@ -314,22 +314,22 @@ function getCategories() {
       name: 'Top',
       url: 'top-of-the-world',
     },
-    {
-      name: 'Grand pianos',
-      url: 'grand-pianos',
-    },
-    {
-      name: 'A-frames',
-      url: 'a-frame',
-    },
-    {
-      name: 'Cycladic homes',
-      url: 'cycladic-homes',
-    },
-    {
-      name: 'Surfing',
-      url: 'surfing',
-    },
+    // {
+    //   name: 'Grand pianos',
+    //   url: 'grand-pianos',
+    // },
+    // {
+    //   name: 'A-frames',
+    //   url: 'a-frame',
+    // },
+    // {
+    //   name: 'Cycladic homes',
+    //   url: 'cycladic-homes',
+    // },
+    // {
+    //   name: 'Surfing',
+    //   url: 'surfing',
+    // },
     {
       name: 'Containers',
       url: 'containers',
@@ -370,10 +370,10 @@ function getCategories() {
       name: 'Riads',
       url: 'riads',
     },
-    {
-      name: "Shepherd's hut",
-      url: 'shepherds-huts',
-    },
+    // {
+    //   name: "Shepherd's hut",
+    //   url: 'shepherds-huts',
+    // },
     {
       name: 'Hanoks',
       url: 'hanoks',
@@ -385,10 +385,6 @@ function getCategories() {
     {
       name: 'Casas particulares',
       url: 'casas',
-    },
-    {
-      name: 'Minsus',
-      url: 'minsus',
     },
     {
       name: 'Campers',
