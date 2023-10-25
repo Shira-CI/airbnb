@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { filterService } from "../services/filter.service"
-// import { set } from 'date-fns'
 import { useLocation } from 'react-router-dom'
-
 
 export function LabelsCarousel() {
     const [isDragging, setIsDragging] = useState(false)
-    const [activeCategory, setActiveCategory] = useState('')
+    const [scrollPosition, setScrollPosition] = useState(0)
     const navigate = useNavigate()
     const location = useLocation()
     const searchParams = new URLSearchParams(location.search)
@@ -19,19 +17,15 @@ export function LabelsCarousel() {
     const categoryRef = useRef(null)
     const savedIsDragging = useRef(false)
     let carouselElement, startX, startScrollLeft, movingWidth
-
     // console.log(categoryType , 'categoryType')
-    
-
-    useEffect(() => {
-        savedIsDragging.current = isDragging
-    }, [isDragging])
+    // console.log(scrollPosition, 'scrollPosition state')
 
     useEffect(() => {
         carouselElement = carouselRef.current
         if (!carouselElement) return
 
         function handleScroll() {
+            setScrollPosition(carouselElement.scrollLeft)
             if (carouselElement.scrollLeft === 0) {
                 arrowLeftRef.current.style.display = 'none'
                 arrowRightRef.current.style.display = 'block'
@@ -44,9 +38,25 @@ export function LabelsCarousel() {
             }
         }
         carouselElement.addEventListener('scroll', handleScroll)
+        return () => {
+            carouselElement.removeEventListener('scroll', handleScroll)
+        }
     }, [])
 
+    useEffect(() => {                         //sets scroll position from params
+        const scrollParam = searchParams.get('scrollLeft')
+        if (scrollParam && carouselElement) {
+            carouselElement.scrollLeft = parseInt(scrollParam, 10)
+
+            setScrollPosition(parseInt(scrollParam, 10))
+        }
+    }, [location.search])
+
     useEffect(() => {
+        savedIsDragging.current = isDragging
+    }, [isDragging])
+
+    useEffect(() => {                             //arrows listeners
         arrowLeftRef.current.style.display = 'none'
         const arrowsElements = {
             arrowLeftElement: arrowLeftRef.current,
@@ -62,7 +72,7 @@ export function LabelsCarousel() {
         }
     }, [])
 
-    useEffect(() => {
+    useEffect(() => {                            //mouse listeners
         if (!carouselElement) return
         carouselElement.addEventListener('mousedown', dragStart)
         carouselElement.addEventListener('mousemove', dragging)
@@ -91,10 +101,9 @@ export function LabelsCarousel() {
         setIsDragging(false)
         carouselElement.classList.remove('dragging')
     }
-    function onCategoryClick( category) {
-          navigate(`/?type=${category.name}`)
+    function onCategoryClick(category) {
+        navigate(`/?type=${category.name}&scrollLeft=${scrollPosition}`)
     }
-
 
     if (!categories) return
     return (

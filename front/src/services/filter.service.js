@@ -281,10 +281,10 @@ function getCategories() {
       name: 'National parks',
       url: 'national-parks',
     },
-    // {
-    //   name: 'New',
-    //   url: 'new',
-    // },
+    {
+      name: 'New',
+      url: 'new',
+    },
     // {
     //   name: 'Vineyards',
     //   url: 'vineyards',
@@ -338,10 +338,10 @@ function getCategories() {
       name: 'Domes',
       url: 'domes',
     },
-    {
-      name: 'Windmills',
-      url: 'windmills',
-    },
+    // {
+    //   name: 'Windmills',
+    //   url: 'windmills',
+    // },
     {
       name: 'Trulli',
       url: 'trulli',
@@ -374,10 +374,7 @@ function getCategories() {
     //   name: "Shepherd's hut",
     //   url: 'shepherds-huts',
     // },
-    {
-      name: 'Hanoks',
-      url: 'hanoks',
-    },
+   
     {
       name: 'Dammusi',
       url: 'dammusi',
@@ -393,6 +390,10 @@ function getCategories() {
     {
       name: 'Skiing',
       url: 'skiing',
+    },
+    {
+      name: 'Hanoks',
+      url: 'hanoks',
     },
   ]
 

@@ -1,7 +1,6 @@
 .wrapper {
     max-width: calc(100vw - 160px);
     margin: 0;
-    // margin-top: 20px;
     position: relative;
 
     .category .category-img img {
@@ -52,7 +51,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(90deg, #ffffffda 0, transparent 100px, transparent calc(100% - 100px), #ffffffda 100%);
+        background-image: linear-gradient(90deg, #ffffffda 0, transparent 80px, transparent calc(100% - 80px), #ffffffda 100%);
         pointer-events: none;
     }
 
@@ -62,7 +61,6 @@
     }
 
     .labelsCarousel {
-
         display: grid;
         grid-auto-flow: column;
         gap: 26px;
@@ -71,8 +69,6 @@
         scroll-behavior: smooth;
         padding: 0 10px;
         height: 78px;
-
-
 
         .category {
             height: 100%;
