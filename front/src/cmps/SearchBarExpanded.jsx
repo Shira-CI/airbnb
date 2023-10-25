@@ -28,6 +28,7 @@ export function SearchBarExpanded({ selectedTab, setSelectedTab, isSearchOpen, o
 
     const onChangeLocation = (value) => {
         if (value === "I'm flexible") value = ""
+        if (value === "South America") value = "Brazil"
         setFilterBy({ ...filterBy, location: value })
         setSelectedTab('checkIn')
     }
