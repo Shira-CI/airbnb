@@ -101,7 +101,7 @@ export function MyTrips() {
                         <tbody>
                             {localUser.orders.map(order => {
                                 const dynClass = order.status
-                                console.log(order)
+                                // console.log(order)
                                 return (
                                     <tr className='trip-row' key={order._id}>
                                         <td className='stay-name-td'> <span className='stay-name'> {order.stayName}</span></td>
