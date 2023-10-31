@@ -43,18 +43,18 @@ app.use('/api/review', reviewRoutes)
 app.use('/api/order', orderRoutes)
 app.use('/api', stayRoutes)
 
-console.log('server')
+// console.log('server')
 setupSocketAPI(server)
 
-// app.get('/**', (req, res) => {
-//   res.sendFile(path.resolve('public/index.html'))
-// })
+app.get('/**', (req, res) => {
+  res.sendFile(path.resolve('public/index.html'))
+})
 
 const port = process.env.PORT || 3030
 
-app.get('/**', (req, res) => {
-    res.sendFile(path.join( 'public', 'index.html'))
-})
+// app.get('/**', (req, res) => {
+//     res.sendFile(path.join( 'public', 'index.html'))
+// })
 
 server.listen(port, () => {
   logger.info('Server is running on port: ' + port)

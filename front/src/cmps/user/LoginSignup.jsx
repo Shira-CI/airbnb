@@ -32,7 +32,7 @@ export function LoginSignup({ onChangeLoginStatus, onCloseModal }) {
     if (!credentials.username) return
     try {
       const user = await login(credentials)
-      console.log(user)
+      // console.log(user)
       showSuccessMsg(`Welcome: ${user.fullname}`)
       onCloseModal()
     } catch (err) {

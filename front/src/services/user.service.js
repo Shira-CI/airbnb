@@ -39,7 +39,7 @@ async function update(user) {
 
 async function login(userCred) {
   const user = await httpService.post('auth/login', userCred)
-  console.log(user)
+  // console.log(user)
   if (user) {
     return saveLocalUser(user)
   }
