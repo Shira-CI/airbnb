@@ -33,6 +33,8 @@ import { stayRoutes } from './api/stay/stay.routes.mjs'
 import { setupSocketAPI } from './services/socket.service.mjs'
 import { orderRoutes } from './api/order/order.routes.mjs'
 import { setupAsyncLocalStorage } from './middlewares/setupAls.middleware.mjs'
+import { logger } from './services/logger.service.mjs'
+
 app.all('*', setupAsyncLocalStorage)
 
 app.use('/api/auth', authRoutes)
@@ -44,15 +46,16 @@ app.use('/api', stayRoutes)
 console.log('server')
 setupSocketAPI(server)
 
-// Make every server-side-route to match the index.html
-// so when requesting http://localhost:3030/index.html/stay/123 it will still respond with
-// our SPA (single page app) (the index.html file) and allow vue/react-router to take it from there
+// app.get('/**', (req, res) => {
+//   res.sendFile(path.resolve('public/index.html'))
+// })
+
+const port = process.env.PORT || 3030
+
 app.get('/**', (req, res) => {
-  res.sendFile(path.resolve('public/index.html'))
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-import { logger } from './services/logger.service.mjs'
-const port = process.env.PORT || 3030
 server.listen(port, () => {
   logger.info('Server is running on port: ' + port)
 })
